@@ -27,6 +27,7 @@ function App() {
         minH='100vh'
         justify='space-between'
         flexDir='column'
+        overflow={'hidden'}
       >
         <Flex flexDir='row' m='10px'>
           <Spacer></Spacer>

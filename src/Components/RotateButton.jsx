@@ -16,7 +16,7 @@ export const RotateButton = props => {
     : `${spin} infinite 20s linear`;
   return (
     <div>
-      <Box as='button' boxSize='2.5rem'>
+      <Box as='button' boxSize='3.5rem' bg='white'>
         <Image src={bt_circle} alt='WavesCircle' animation={animation} />
       </Box>
     </div>

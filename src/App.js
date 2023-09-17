@@ -1,4 +1,5 @@
 import React from 'react';
+import { Image } from '@chakra-ui/react';
 import {
   ChakraProvider,
   Box,
@@ -12,30 +13,29 @@ import {
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
 import Footer from './Components/Footer';
+import './App.css';
+import waves_background from './assets/waves_background.jpg';
+import waves_logo from './assets/waves_logo.png';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakras
-            </Link>
-          </VStack>
-        </Grid>
-        <Footer />
+      <Box
+        textAlign='center'
+        fontSize='xl'
+        backgroundImage={waves_background}
+        backgroundSize='cover'
+        minH='95vh'
+        display='flex'
+        flexDirection='column'
+      >
+        <Grid minH='47.45vh' p={3}></Grid>
+        <Box minH='20vh'>
+          <Image src={waves_logo} margin='auto' paddingTop='8vh'></Image>
+        </Box>
+        <Box bg='black' color='white'>
+          <Footer bottom='0px' pos='relative' marginTop='auto' minH='5vh' />
+        </Box>
       </Box>
     </ChakraProvider>
   );

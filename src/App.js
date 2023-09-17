@@ -13,7 +13,6 @@ import {
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
 import Footer from './Components/Footer';
-import './App.css';
 import waves_background from './assets/waves_background.jpg';
 import waves_logo from './assets/waves_logo.png';
 

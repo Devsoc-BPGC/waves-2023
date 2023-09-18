@@ -1,11 +1,7 @@
 import React from 'react';
-
+import './Footer.css';
 const Footer = () => {
-    return (
-        <footer>
-            Made with ❤️ by DevSoc
-        </footer>
-    );
-}
+  return <footer className='foot'>Made with ❤️ by DevSoc</footer>;
+};
 
 export default Footer;

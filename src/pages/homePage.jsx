@@ -27,7 +27,7 @@ export default function HomePage() {
       >
         <Grid minH='20.5rem' p={3}></Grid>
         <Box minH='11rem'>
-          <Image src={waves_logo} margin='auto' paddingTop='8vh'></Image>
+          <Image src={waves_logo} margin='auto' paddingTop='3.45vh'></Image>
         </Box>
       </Box>
     </ChakraProvider>

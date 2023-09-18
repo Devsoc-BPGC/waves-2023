@@ -13,8 +13,7 @@ import {
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
 import Footer from './Components/Footer';
-import waves_background from './assets/waves_background.jpg';
-import waves_logo from './assets/waves_logo.png';
+import HomePage from './pages/homePage';
 
 function App() {
   return (
@@ -22,20 +21,11 @@ function App() {
       <Box
         textAlign='center'
         fontSize='xl'
-        backgroundImage={waves_background}
-        backgroundSize='cover'
-        minH='95vh'
         display='flex'
         flexDirection='column'
-      >
-        <Grid minH='47.45vh' p={3}></Grid>
-        <Box minH='20vh'>
-          <Image src={waves_logo} margin='auto' paddingTop='8vh'></Image>
-        </Box>
-        <Box bg='black' color='white'>
-          <Footer bottom='0px' pos='relative' marginTop='auto' minH='5vh' />
-        </Box>
-      </Box>
+      ></Box>
+      <HomePage />
+      <Footer />
     </ChakraProvider>
   );
 }

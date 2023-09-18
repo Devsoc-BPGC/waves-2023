@@ -13,7 +13,7 @@ import {
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
 import Footer from './Components/Footer';
-import HomePage from './pages/homePage';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (

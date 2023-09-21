@@ -20,7 +20,7 @@ const style = bgColour => {
 const Modal = props => {
   const variants = {
     open: {
-      height: '75rem',
+      height: '200vh',
       width: '100%',
       borderRadius: [
         '50% 0 50% 50%',
@@ -53,8 +53,8 @@ const Modal = props => {
   const circleVariant = r => {
     return {
       open: {
-        height: r,
-        width: r,
+        height: `${r}vh`,
+        width: `${r}vh`,
         transition: {
           duration: 0.5,
           when: 'beforeChildren',
@@ -92,35 +92,29 @@ const Modal = props => {
       />
       <motion.div
         style={{
-          marginTop: '-19rem',
+          marginTop: '-50vh',
           display: 'flex',
           alignContent: 'center',
           flexDirection: 'column',
           flexWrap: 'wrap',
           justifyContent: 'center',
-          height: '75rem',
+          height: '200vh',
         }}
       >
-        <motion.div style={style('#5d5e5e')} variants={circleVariant('75rem')}>
-          <motion.div
-            style={style('#797a7a')}
-            variants={circleVariant('65rem')}
-          >
-            <motion.div
-              style={style('#9a9b9c')}
-              variants={circleVariant('55rem')}
-            >
+        <motion.div style={style('#5d5e5e')} variants={circleVariant(203)}>
+          <motion.div style={style('#797a7a')} variants={circleVariant(176)}>
+            <motion.div style={style('#9a9b9c')} variants={circleVariant(149)}>
               <motion.div
                 style={style('#b6b6b8')}
-                variants={circleVariant('45rem')}
+                variants={circleVariant(122)}
               >
                 <motion.div
                   style={style('#cfd0d1')}
-                  variants={circleVariant('35rem')}
+                  variants={circleVariant(95)}
                 >
                   <motion.div
                     style={style('#ededed')}
-                    variants={circleVariant('25rem')}
+                    variants={circleVariant(68)}
                   >
                     <Image src={picture} />
                   </motion.div>

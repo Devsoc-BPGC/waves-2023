@@ -1,8 +1,11 @@
-import { React, useEffect, useRef } from 'react';
+import { React } from 'react';
 import { Button, ChakraProvider } from '@chakra-ui/react';
 import background_img from '../assets/bt_background.png';
 import Fonts from './Fonts';
 import theme from './theme';
+function openRegPortal() {
+  window.open('https://register.wavesbits.org/', '_blank');
+}
 export default function Register() {
   return (
     <ChakraProvider theme={theme}>
@@ -24,6 +27,7 @@ export default function Register() {
           width: '16rem',
           transition: 'all 0.5s',
         }}
+        onClick={openRegPortal}
       >
         Register
       </Button>

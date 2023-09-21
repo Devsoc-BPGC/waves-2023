@@ -13,9 +13,17 @@ export default function Register() {
         borderRadius='5vh'
         fontWeight='bolder'
         fontSize='1.7rem'
+        fontFamily='"Dalek", cursive'
         bgImg={background_img}
         bgSize='cover'
         color='white'
+        boxShadow='0px 0px 20px #add8e6'
+        _hover={{
+          height: '3rem',
+          fontSize: '2rem',
+          width: '16rem',
+          transition: 'all 0.5s',
+        }}
       >
         Register
       </Button>

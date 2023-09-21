@@ -1,4 +1,4 @@
-import { React, useEffect, useRef } from 'react';
+import { React } from 'react';
 import { Button, ChakraProvider } from '@chakra-ui/react';
 import background_img from '../assets/bt_background.png';
 import Fonts from './Fonts';

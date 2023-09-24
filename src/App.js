@@ -2,7 +2,7 @@ import React from 'react';
 import HomePage from './Pages/HomePage';
 function App() {
   return (
-    <div>
+    <div style={{ overflowX: 'hidden' }}>
       <HomePage />
     </div>
   );

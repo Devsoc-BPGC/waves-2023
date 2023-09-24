@@ -11,7 +11,7 @@ import {
 import { AnimatePresence } from 'framer-motion';
 import Footer from '../Components/Footer';
 import RotateButton from '../Components/RotateButton';
-import Modal from '../Components/Modal';
+import ModalDesktop from '../Components/ModalDesktop';
 import waves_logo from '../assets/Waves-logo.png';
 import main_page_bg from '../assets/main_page_bg.png';
 import main_page_bg_phone from '../assets/main_page_bg_phone.png';
@@ -48,7 +48,7 @@ export default function HomePage() {
           <Footer />
         </Flex>
         <AnimatePresence>
-          {modalOpen && <Modal handleClick={handleClick} />}
+          {modalOpen && <ModalDesktop handleClick={handleClick} />}
         </AnimatePresence>
       </Box>
     </ChakraProvider>

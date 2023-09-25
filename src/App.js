@@ -14,11 +14,13 @@ import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
 import Footer from './Components/Footer';
 import HomePage from './pages/HomePage';
+import Carousel from './pages/Carousel';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <HomePage />
+      <Carousel />
       <Footer />
     </ChakraProvider>
   );

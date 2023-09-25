@@ -1,9 +1,24 @@
-import React from 'react';
+import { React, useState } from 'react';
 import { motion } from 'framer-motion';
-import { CloseButton, Image } from '@chakra-ui/react';
+import { CloseButton, Image, Heading } from '@chakra-ui/react';
 import picture from '../assets/Waves_logo2.png';
 
-const style = bgColour => {
+const CenterText = layer => {
+  if (layer == 0) {
+    return '';
+  } else if (layer == 1) {
+    return 'Sponser';
+  } else if (layer == 2) {
+    return 'Our Team';
+  } else if (layer == 3) {
+    return 'Media Pathners';
+  } else if (layer == 4) {
+    return 'Developers';
+  } else if (layer == 5) {
+    return '';
+  }
+};
+const style = (bgColour, zI = '0') => {
   return {
     backgroundColor: bgColour,
     height: 0,
@@ -14,10 +29,18 @@ const style = bgColour => {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
+    zIndex: zI,
   };
 };
 
 const Modal = props => {
+  const [CircleCol, setCircleCol] = useState('');
+  const handleMouseEnter = e => {
+    setCircleCol(CenterText(e));
+  };
+  const handleMouseLeave = e => {
+    setCircleCol(CenterText(e - 1));
+  };
   const variants = {
     open: {
       height: '200vh',
@@ -101,22 +124,42 @@ const Modal = props => {
           height: '200vh',
         }}
       >
-        <motion.div style={style('#5d5e5e')} variants={circleVariant(203)}>
-          <motion.div style={style('#797a7a')} variants={circleVariant(176)}>
-            <motion.div style={style('#9a9b9c')} variants={circleVariant(149)}>
+        <motion.div
+          style={style('#ffffff', '1')}
+          onMouseEnter={() => handleMouseEnter(1)}
+          onMouseLeave={() => handleMouseLeave(1)}
+          variants={circleVariant(203)}
+        >
+          <motion.div
+            style={style('#797a7a', '2')}
+            onMouseEnter={() => handleMouseEnter(2)}
+            onMouseLeave={() => handleMouseLeave(2)}
+            variants={circleVariant(176)}
+          >
+            <motion.div
+              style={style('#9a9b9c', '3')}
+              onMouseEnter={() => handleMouseEnter(3)}
+              onMouseLeave={() => handleMouseLeave(3)}
+              variants={circleVariant(149)}
+            >
               <motion.div
                 style={style('#b6b6b8')}
+                onMouseEnter={() => handleMouseEnter(4)}
+                onMouseLeave={() => handleMouseLeave(4)}
                 variants={circleVariant(122)}
               >
                 <motion.div
                   style={style('#cfd0d1')}
+                  onMouseEnter={() => handleMouseEnter(5)}
+                  onMouseLeave={() => handleMouseLeave(5)}
                   variants={circleVariant(95)}
                 >
                   <motion.div
-                    style={style('#ededed')}
+                    style={style('rgba(217, 217, 217, 0.1)')}
                     variants={circleVariant(68)}
                   >
-                    <Image src={picture} />
+                    <Heading size='3xl'>{CircleCol}</Heading>
+                    {CircleCol == '' ? <Image src={picture} /> : null}
                   </motion.div>
                 </motion.div>
               </motion.div>

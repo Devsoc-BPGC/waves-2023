@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from '@chakra-ui/react';
+import { Center, Image } from '@chakra-ui/react';
 import {
   ChakraProvider,
   Box,
@@ -21,13 +21,15 @@ export default function HomePage() {
         fontSize='xl'
         backgroundImage={waves_background}
         backgroundSize='cover'
-        minH='1rem'
+        h='100vh'
         display='flex'
         flexDirection='column'
+        alignContent='center'
+        justifyContent='center'
+        alignItems='center'
       >
-        <Grid minH='20.5rem' p={3}></Grid>
-        <Box minH='11rem'>
-          <Image src={waves_logo} margin='auto' paddingTop='3.45rem'></Image>
+        <Box marginTop='25%' maxWidth='85%'>
+          <Image src={waves_logo}></Image>
         </Box>
       </Box>
     </ChakraProvider>

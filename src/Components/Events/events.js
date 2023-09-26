@@ -45,6 +45,19 @@ function Events() {
           backgroundSize='cover'
         />
         <Flex direction='column'>
+          <Box position='absolute' top='5%' right='35%'>
+            <div
+              style={{
+                color: 'white',
+                fontSize: 96,
+                fontFamily: 'Junge',
+                fontWeight: '400',
+                wordWrap: 'break-word',
+              }}
+            >
+              E V E N T S
+            </div>
+          </Box>
           <Box position='absolute' top='5%' right='5%'>
             <Image
               src={jellyfish}
@@ -171,19 +184,10 @@ function Events() {
             </Text>
           </Box>
         </Flex>
-        <Image
-          src={seaweed}
-          alt='Seaweed'
-          position='absolute'
-          bottom='0%'
-          left='48.5%'
-          width='300px'
-          height='162px'
-          zIndex='1'
-        />
       </Box>
     </ChakraProvider>
   );
 }
 
 export default Events;
+

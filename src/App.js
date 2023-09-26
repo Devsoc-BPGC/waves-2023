@@ -13,7 +13,6 @@ function App() {
          <HomePage />
       </div>
         <Events />
-        <Footer />
       </Box>
     </ChakraProvider>
   )

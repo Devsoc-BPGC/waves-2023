@@ -1,34 +1,24 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CloseButton, Image, Show, Box } from '@chakra-ui/react';
-import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-  Button,
-} from '@chakra-ui/react';
+import { CloseButton, Image, Show } from '@chakra-ui/react';
 import picture from '../assets/Waves_logo2.png';
 import styles from './ModalDesktop.module.css';
 
-const style = bgColour => {
-  return {
-    backgroundColor: bgColour,
-    height: 0,
-    width: 0,
-    borderRadius: '50%',
-    position: 'relative',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-  };
-};
-
 const ModalDesktop = props => {
+  const style = bgColour => {
+    return {
+      backgroundColor: bgColour,
+      height: 0,
+      width: 0,
+      borderRadius: '50%',
+      position: 'relative',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+    };
+  };
+
   const variants = {
     open: {
       height: '200vh',
@@ -68,7 +58,46 @@ const ModalDesktop = props => {
         width: `${r}vh`,
         transition: {
           duration: 0.5,
-          when: 'beforeChildren',
+          delayChildren: 0.2,
+        },
+      },
+      close: {
+        height: 0,
+        width: 0,
+        transition: { duration: 0.2, when: 'afterChildren' },
+      },
+    };
+  };
+
+  const circleVariant2 = r => {
+    return {
+      open: {
+        height: `${r}vh`,
+        width: `${r}vh`,
+        outline: '2px dotted #FFF',
+        transition: {
+          duration: 0.5,
+          delayChildren: 0.2,
+        },
+      },
+      close: {
+        height: 0,
+        width: 0,
+        transition: { duration: 0.2, when: 'afterChildren' },
+      },
+    };
+  };
+
+  const circleVariant3 = r => {
+    return {
+      open: {
+        height: `${r}vh`,
+        width: `${r}vh`,
+        outline: '2px dotted #FFF',
+        transition: {
+          delay: 1.3,
+          duration: 0.5,
+          delayChildren: 1.2,
         },
       },
       close: {
@@ -85,7 +114,7 @@ const ModalDesktop = props => {
         <motion.div
           animate='open'
           style={{
-            backgroundColor: '#48494a',
+            backgroundColor: 'rgba(137, 137, 137, 0.04)',
             position: 'absolute',
             height: 0,
             width: 0,
@@ -99,11 +128,62 @@ const ModalDesktop = props => {
           variants={variants}
           exit='close'
         >
+          <motion.div
+            style={{
+              zIndex: 3,
+              position: 'absolute',
+              top: '0px',
+              left: '3%',
+              height: '100%',
+              width: '94%',
+              backgroundColor: 'transparent',
+            }}
+          >
+            <motion.div
+              style={{
+                marginTop: '-50vh',
+                display: 'flex',
+                alignContent: 'center',
+                flexDirection: 'column',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+                height: '200vh',
+              }}
+            >
+              <motion.div
+                style={style('transparent')}
+                variants={circleVariant3(203)}
+              >
+                <motion.div
+                  style={style('transparent')}
+                  variants={circleVariant2(176)}
+                >
+                  <motion.div
+                    style={style('transparent')}
+                    variants={circleVariant2(149)}
+                  >
+                    <motion.div
+                      style={style('transparent')}
+                      variants={circleVariant2(122)}
+                    >
+                      <motion.div
+                        style={style('transparent')}
+                        variants={circleVariant2(95)}
+                      >
+                        <motion.div
+                          style={style('transparent')}
+                          variants={circleVariant2(68)}
+                        ></motion.div>
+                      </motion.div>
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
           <CloseButton
             onClick={props.handleClick}
-            style={{ position: 'absolute', left: '1rem', top: '1rem' }}
-            size='lg'
-            color='white'
+            style={{ position: 'absolute' }}
           />
           <motion.div
             style={{
@@ -116,25 +196,28 @@ const ModalDesktop = props => {
               height: '200vh',
             }}
           >
-            <motion.div style={style('#5d5e5e')} variants={circleVariant(203)}>
+            <motion.div
+              style={style('rgba(217, 217, 217, 0.10)')}
+              variants={circleVariant(203)}
+            >
               <motion.div
-                style={style('#797a7a')}
+                style={style('rgba(217, 217, 217, 0.15)')}
                 variants={circleVariant(176)}
               >
                 <motion.div
-                  style={style('#9a9b9c')}
+                  style={style('rgba(217, 217, 217, 0.20)')}
                   variants={circleVariant(149)}
                 >
                   <motion.div
-                    style={style('#b6b6b8')}
+                    style={style('rgba(217, 217, 217, 0.25)')}
                     variants={circleVariant(122)}
                   >
                     <motion.div
-                      style={style('#cfd0d1')}
+                      style={style('rgba(217, 217, 217, 0.30)')}
                       variants={circleVariant(95)}
                     >
                       <motion.div
-                        style={style('#ededed')}
+                        style={style('rgba(217, 217, 217, 0.60)')}
                         variants={circleVariant(68)}
                       >
                         <Image src={picture} />

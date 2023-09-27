@@ -184,6 +184,7 @@ const ModalDesktop = props => {
           <CloseButton
             onClick={props.handleClick}
             style={{ position: 'absolute' }}
+            color={'white'}
           />
           <motion.div
             style={{

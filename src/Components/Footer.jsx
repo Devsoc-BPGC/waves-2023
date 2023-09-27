@@ -1,7 +1,9 @@
 import React from 'react';
 const Footer = () => {
   return (
-    <footer style={{ color: 'white', fontSize: '1rem' }}>
+    <footer
+      style={{ color: 'white', fontSize: '1rem', backgroundColor: 'black' }}
+    >
       Made with ❤️ by{' '}
       <a href='https://devsoc.club' style={{ color: 'white' }}>
         DevSoc

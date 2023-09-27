@@ -10,7 +10,6 @@ import {
   useMediaQuery,
 } from '@chakra-ui/react';
 import { AnimatePresence } from 'framer-motion';
-import Footer from '../Components/Footer';
 import RotateButton from '../Components/RotateButton';
 import ModalDesktop from '../Components/ModalDesktop';
 import waves_logo from '../assets/Waves-logo.png';
@@ -71,7 +70,6 @@ export default function HomePage() {
           <Box boxSize='10vh' w='100%'>
             <Register />
           </Box>
-          <Footer />
         </Flex>
         <AnimatePresence>
           {modalOpen && <ModalDesktop handleClick={handleClick} />}

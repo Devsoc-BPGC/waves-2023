@@ -4,22 +4,26 @@ import { CloseButton, Image, Show, Heading } from '@chakra-ui/react';
 import picture from '../assets/Waves_logo2.png';
 import styles from './ModalDesktop.module.css';
 const CenterText = layer => {
-  if (layer == 0) {
+  if (layer === 0) {
     return '';
-  } else if (layer == 1) {
-    return 'Sponser';
-  } else if (layer == 2) {
+  } else if (layer === 1) {
+    return 'Sponsor';
+  } else if (layer === 2) {
     return 'Our Team';
-  } else if (layer == 3) {
-    return 'Media Pathners';
-  } else if (layer == 4) {
+  } else if (layer === 3) {
+    return 'Media Partners';
+  } else if (layer === 4) {
     return 'Developers';
-  } else if (layer == 5) {
+  } else if (layer === 5) {
     return '';
   }
 };
 const ModalDesktop = props => {
-  const style = (bgColour, zI) => {
+  const style = (bgColour, zI, isActive) => {
+    var radius = '0px 0px 0px 0px red';
+    if (isActive === 1) {
+      radius = '1px 1px 30px 4px black';
+    }
     return {
       backgroundColor: bgColour,
       height: 0,
@@ -31,6 +35,8 @@ const ModalDesktop = props => {
       alignItems: 'center',
       justifyContent: 'center',
       zIndex: zI,
+      boxShadow: radius,
+      cursor: 'pointer',
     };
   };
   const [CircleCol, setCircleCol] = useState('');
@@ -173,39 +179,34 @@ const ModalDesktop = props => {
             >
               <motion.div
                 style={style('transparent')}
-                variants={circleVariant3(203)}
+                variants={circleVariant3(176)}
+                onMouseEnter={() => handleMouseEnter(1)}
+                onMouseLeave={() => handleMouseLeave(1)}
               >
                 <motion.div
-                  style={style('transparent')}
-                  variants={circleVariant2(176)}
-                  onMouseEnter={() => handleMouseEnter(1)}
-                  onMouseLeave={() => handleMouseLeave(1)}
+                  style={style({ bgColour: 'transparent', isActive: 0 })}
+                  variants={circleVariant2(149)}
+                  onMouseEnter={() => handleMouseEnter(2)}
+                  onMouseLeave={() => handleMouseLeave(2)}
                 >
                   <motion.div
-                    style={style('transparent')}
-                    variants={circleVariant2(149)}
-                    onMouseEnter={() => handleMouseEnter(2)}
-                    onMouseLeave={() => handleMouseLeave(2)}
+                    style={style({ bgColour: 'transparent', isActive: 0 })}
+                    variants={circleVariant2(122)}
+                    onMouseEnter={() => handleMouseEnter(3)}
+                    onMouseLeave={() => handleMouseLeave(3)}
                   >
                     <motion.div
-                      style={style('transparent')}
-                      variants={circleVariant2(122)}
-                      onMouseEnter={() => handleMouseEnter(3)}
-                      onMouseLeave={() => handleMouseLeave(3)}
+                      style={style({ bgColour: 'transparent', isActive: 0 })}
+                      variants={circleVariant2(95)}
+                      onMouseEnter={() => handleMouseEnter(4)}
+                      onMouseLeave={() => handleMouseLeave(4)}
                     >
                       <motion.div
-                        style={style('transparent')}
-                        variants={circleVariant2(95)}
-                        onMouseEnter={() => handleMouseEnter(4)}
-                        onMouseLeave={() => handleMouseLeave(4)}
-                      >
-                        <motion.div
-                          style={style('transparent')}
-                          variants={circleVariant2(68)}
-                          onMouseEnter={() => handleMouseEnter(5)}
-                          onMouseLeave={() => handleMouseLeave(5)}
-                        ></motion.div>
-                      </motion.div>
+                        style={style({ bgColour: 'transparent', isActive: 0 })}
+                        variants={circleVariant2(68)}
+                        onMouseEnter={() => handleMouseEnter(5)}
+                        onMouseLeave={() => handleMouseLeave(5)}
+                      ></motion.div>
                     </motion.div>
                   </motion.div>
                 </motion.div>
@@ -232,34 +233,56 @@ const ModalDesktop = props => {
             }}
           >
             <motion.div
-              style={style('rgba(217, 217, 217, 0.10)', 1)}
-              variants={circleVariant(203)}
+              style={
+                CircleCol === 'Sponsor'
+                  ? style('rgba(217, 217, 217, 0.15)', 2, 1)
+                  : style('rgba(217, 217, 217, 0.15)', 2, 0)
+              }
+              variants={circleVariant(176)}
             >
               <motion.div
-                style={style('rgba(217, 217, 217, 0.15)', 2)}
-                variants={circleVariant(176)}
+                style={
+                  CircleCol === 'Our Team'
+                    ? style('rgba(217, 217, 217, 0.20)', 3, 1)
+                    : style('rgba(217, 217, 217, 0.20)', 3, 0)
+                }
+                variants={circleVariant(149)}
               >
                 <motion.div
-                  style={style('rgba(217, 217, 217, 0.20)', 3)}
-                  variants={circleVariant(149)}
+                  style={
+                    CircleCol === 'Media Partners'
+                      ? style('rgba(217, 217, 217, 0.25)', 4, 1)
+                      : style('rgba(217, 217, 217, 0.25)', 4, 0)
+                  }
+                  variants={circleVariant(122)}
+                  boxShadow='dark-lg'
                 >
                   <motion.div
-                    style={style('rgba(217, 217, 217, 0.25)', 4)}
-                    variants={circleVariant(122)}
+                    style={
+                      CircleCol === 'Developers'
+                        ? style('rgba(217, 217, 217, 0.30)', 5, 1)
+                        : style('rgba(217, 217, 217, 0.30)', 5, 0)
+                    }
+                    variants={circleVariant(95)}
+                    boxShadow='dark-lg'
                   >
                     <motion.div
-                      style={style('rgba(217, 217, 217, 0.30)', 5)}
-                      variants={circleVariant(95)}
+                      style={
+                        CircleCol === ''
+                          ? style('rgba(217, 217, 217, 0.60)', 6, 1)
+                          : style('rgba(217, 217, 217, 0.60)', 6, 0)
+                      }
+                      variants={circleVariant(68)}
+                      boxShadow='dark-lg'
                     >
-                      <motion.div
-                        style={style('rgba(217, 217, 217, 0.60)', 6)}
-                        variants={circleVariant(68)}
+                      <Heading
+                        size='3xl'
+                        color='black'
+                        fontFamily='"Dalek", cursive'
                       >
-                        <Heading size='3xl' fontFamily='"Dalek", cursive'>
-                          {CircleCol}
-                        </Heading>
-                        {CircleCol == '' ? <Image src={picture} /> : null}
-                      </motion.div>
+                        {CircleCol}
+                      </Heading>
+                      {CircleCol == '' ? <Image src={picture} /> : null}
                     </motion.div>
                   </motion.div>
                 </motion.div>

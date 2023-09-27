@@ -2,3 +2,6 @@
   font-family: Dalek;
   src: url(assets/fonts/Dalek.ttf);
 }
+.app-container {
+  overflow: hidden;
+}

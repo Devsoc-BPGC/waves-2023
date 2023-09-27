@@ -174,36 +174,36 @@ const ModalDesktop = props => {
               <motion.div
                 style={style('transparent')}
                 variants={circleVariant3(203)}
-                onMouseEnter={() => handleMouseEnter(1)}
-                onMouseLeave={() => handleMouseLeave(1)}
               >
                 <motion.div
                   style={style('transparent')}
                   variants={circleVariant2(176)}
-                  onMouseEnter={() => handleMouseEnter(2)}
-                  onMouseLeave={() => handleMouseLeave(2)}
+                  onMouseEnter={() => handleMouseEnter(1)}
+                  onMouseLeave={() => handleMouseLeave(1)}
                 >
                   <motion.div
                     style={style('transparent')}
                     variants={circleVariant2(149)}
-                    onMouseEnter={() => handleMouseEnter(3)}
-                    onMouseLeave={() => handleMouseLeave(3)}
+                    onMouseEnter={() => handleMouseEnter(2)}
+                    onMouseLeave={() => handleMouseLeave(2)}
                   >
                     <motion.div
                       style={style('transparent')}
                       variants={circleVariant2(122)}
-                      onMouseEnter={() => handleMouseEnter(4)}
-                      onMouseLeave={() => handleMouseLeave(4)}
+                      onMouseEnter={() => handleMouseEnter(3)}
+                      onMouseLeave={() => handleMouseLeave(3)}
                     >
                       <motion.div
                         style={style('transparent')}
                         variants={circleVariant2(95)}
-                        onMouseEnter={() => handleMouseEnter(5)}
-                        onMouseLeave={() => handleMouseLeave(5)}
+                        onMouseEnter={() => handleMouseEnter(4)}
+                        onMouseLeave={() => handleMouseLeave(4)}
                       >
                         <motion.div
                           style={style('transparent')}
                           variants={circleVariant2(68)}
+                          onMouseEnter={() => handleMouseEnter(5)}
+                          onMouseLeave={() => handleMouseLeave(5)}
                         ></motion.div>
                       </motion.div>
                     </motion.div>
@@ -215,6 +215,10 @@ const ModalDesktop = props => {
           <CloseButton
             onClick={props.handleClick}
             style={{ position: 'absolute' }}
+            left='1%'
+            top='1%'
+            color={'white'}
+            size='2xl'
           />
           <motion.div
             style={{
@@ -230,14 +234,10 @@ const ModalDesktop = props => {
             <motion.div
               style={style('rgba(217, 217, 217, 0.10)', 1)}
               variants={circleVariant(203)}
-              onMouseEnter={() => handleMouseEnter(1)}
-              onMouseLeave={() => handleMouseLeave(1)}
             >
               <motion.div
                 style={style('rgba(217, 217, 217, 0.15)', 2)}
                 variants={circleVariant(176)}
-                onMouseEnter={() => handleMouseEnter(2)}
-                onMouseLeave={() => handleMouseLeave(2)}
               >
                 <motion.div
                   style={style('rgba(217, 217, 217, 0.20)', 3)}
@@ -255,7 +255,9 @@ const ModalDesktop = props => {
                         style={style('rgba(217, 217, 217, 0.60)', 6)}
                         variants={circleVariant(68)}
                       >
-                        <Heading size='3xl'>{CircleCol}</Heading>
+                        <Heading size='3xl' fontFamily='"Dalek", cursive'>
+                          {CircleCol}
+                        </Heading>
                         {CircleCol == '' ? <Image src={picture} /> : null}
                       </motion.div>
                     </motion.div>

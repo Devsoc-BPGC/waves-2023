@@ -41,7 +41,14 @@ export default function HomePage() {
             <RotateButton onClick={handleClick} />
           </Flex>
           <Spacer></Spacer>
-          <Image m='auto' src={waves_logo} maxW='70%' objectFit='cover' />
+          <Image
+            m='auto'
+            src={waves_logo}
+            maxW='60%'
+            w='40%'
+            objectFit='cover'
+            marginBottom={'3rem'}
+          />
           <Box boxSize='10vh' w='100%'>
             <Register />
           </Box>

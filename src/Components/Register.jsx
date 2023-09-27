@@ -11,20 +11,21 @@ export default function Register() {
     <ChakraProvider theme={theme}>
       <Fonts />
       <Button
-        w='14rem'
-        h='2.7rem'
+        w='12rem'
+        h='2rem'
         borderRadius='5vh'
         fontWeight='bolder'
-        fontSize='1.7rem'
+        fontSize='1.5rem'
         fontFamily='"Dalek", cursive'
         bgImg={background_img}
         bgSize='cover'
         color='white'
         boxShadow='0px 0px 20px #add8e6'
         _hover={{
-          height: '3rem',
-          fontSize: '2rem',
-          width: '16rem',
+          height: '2.5rem',
+          width: '14rem',
+          fontSize: '1.7rem',
+          color: 'yellow',
           transition: 'all 0.5s',
         }}
         onClick={openRegPortal}

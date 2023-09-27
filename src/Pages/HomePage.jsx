@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import WaterWave from 'react-water-wave';
 import {
   ChakraProvider,
   Box,
@@ -16,6 +17,7 @@ import waves_logo from '../assets/Waves-logo.png';
 import main_page_bg from '../assets/main_page_bg.png';
 import main_page_bg_phone from '../assets/main_page_bg_phone.png';
 import Register from '../Components/Register';
+import trans from '../assets/1024px-HD_transparent_picture.png';
 
 export default function HomePage() {
   const [isSmallerThan600] = useMediaQuery('(max-width: 600px)');
@@ -36,6 +38,23 @@ export default function HomePage() {
           justify='space-between'
           flexDir='column'
         >
+          <WaterWave
+            imageUrl={trans}
+            perturbance='0.03'
+            dropRadius='25'
+            resolution='1080'
+            style={{
+              height: '100vh',
+              width: '100vw',
+              backgroundSize: 'cover',
+              position: 'absolute',
+              top: '0px',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+            }}
+          >
+            {methods => <></>}
+          </WaterWave>
           <Flex flexDir='row' m='10px'>
             <Spacer></Spacer>
             <RotateButton onClick={handleClick} />

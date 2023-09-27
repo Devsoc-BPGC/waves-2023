@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import WaterWave from 'react-water-wave';
 import {
   ChakraProvider,
   Box,
@@ -12,11 +13,12 @@ import jellyfish from './jellyfish.svg';
 import horsewheel from './horsewheel.svg';
 import spartanhelmet from './spartanhelmet.svg';
 import helmet_animated from './helmet_animated.svg';
-import swords from './sword.svg';
-import sword_animated from './sword_animated.svg';
-import box from './box.svg';
-import box_animated from './box2.svg';
+import swords from './sword.png';
+import sword_animated from './swordhover.png';
+import box from './boxclosed.png';
+import box_animated from './boxopen.png';
 import seaweed from './seaweed.svg';
+import trans from '../../assets/1024px-HD_transparent_picture.png';
 
 function Events() {
   const [isHoveringSword, setIsHoveringSword] = useState(false);
@@ -28,7 +30,7 @@ function Events() {
   };
 
   const zoomOutOnHover = {
-    transform: 'scale(1.3)',
+    transform: 'scale(1.1)',
     transition: 'transform 0.5s',
     top: '8%',
   };
@@ -44,6 +46,23 @@ function Events() {
           height='105vh'
           backgroundSize='cover'
         />
+        <WaterWave
+          imageUrl={trans}
+          perturbance='0.03'
+          dropRadius='25'
+          resolution='576'
+          style={{
+            height: '105vh',
+            width: '100vw',
+            backgroundSize: 'cover',
+            position: 'absolute',
+            top: '0px',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: '50% 60%',
+          }}
+        >
+          {methods => <></>}
+        </WaterWave>
         <Flex direction='column'>
           <Box position='absolute' top='5%' right='35%'>
             <div
@@ -133,13 +152,29 @@ function Events() {
           </Box>
         </Flex>
         <Flex direction='column'>
-          <Box position='absolute' bottom='23%' left='10%'>
+          <Box position='absolute' bottom='20%' left='14%'>
             <Image
-              src={isHoveringSword ? sword_animated : swords}
+              src={swords}
+              opacity={isHoveringSword ? 0 : 1}
               alt='Swords'
-              width='141.403px'
-              height='213.193px'
               zIndex='1'
+              pos='absolute'
+              bottom='60%'
+              left='-10%'
+              onMouseEnter={() => setIsHoveringSword(true)}
+              onMouseLeave={() => setIsHoveringSword(false)}
+              style={{
+                transition: '0.5s',
+              }}
+            />
+            <Image
+              src={sword_animated}
+              opacity={isHoveringSword ? 1 : 0}
+              alt='Swords'
+              zIndex='1'
+              pos='absolute'
+              bottom='60%'
+              left='-10%'
               onMouseEnter={() => setIsHoveringSword(true)}
               onMouseLeave={() => setIsHoveringSword(false)}
               style={{
@@ -161,15 +196,35 @@ function Events() {
         <Flex>
           <Box position='absolute' bottom='0%' left='27%'>
             <Image
-              src={isHoveringBox ? box_animated : box}
+              src={box}
               alt='Box'
-              width='235px'
-              height='200px'
+              // width='235px'
+              // height='200px'
               zIndex='1'
+              pos='absolute'
+              bottom='100%'
+              left='-10%'
+              opacity={isHoveringBox ? 0 : 1}
               onMouseEnter={() => setIsHoveringBox(true)}
               onMouseLeave={() => setIsHoveringBox(false)}
               style={{
-                transition: '3s',
+                transition: '0.5s',
+              }}
+            />
+            <Image
+              src={box_animated}
+              alt='Box'
+              // width='235px'
+              // height='200px'
+              zIndex='1'
+              pos='absolute'
+              bottom='100%'
+              left='-10%'
+              opacity={isHoveringBox ? 1 : 0}
+              onMouseEnter={() => setIsHoveringBox(true)}
+              onMouseLeave={() => setIsHoveringBox(false)}
+              style={{
+                transition: '0.5s',
               }}
             />
             <Text
@@ -190,4 +245,3 @@ function Events() {
 }
 
 export default Events;
-

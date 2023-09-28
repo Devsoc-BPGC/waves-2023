@@ -8,19 +8,19 @@ import {
   Flex,
   Text,
 } from '@chakra-ui/react';
-import bgimage from './bgimage.png';
-import jellyfish from './jellyfish.svg';
-import horsewheel from './horsewheel.svg';
-import spartanhelmet from './spartanhelmet.svg';
-import helmet_animated from './helmet_animated.svg';
-import swords from './sword.png';
-import sword_animated from './swordhover.png';
-import box from './boxclosed.png';
-import box_animated from './boxopen.png';
-import seaweed from './seaweed.svg';
-import trans from '../../assets/1024px-HD_transparent_picture.png';
+import bgimage from '../assets/bgimage.png';
+import jellyfish from '../assets/jellyfish.svg';
+import horsewheel from '../assets/horsewheel.svg';
+import spartanhelmet from '../assets/spartanhelmet.svg';
+import helmet_animated from '../assets/helmet_animated.svg';
+import swords from '../assets/sword.png';
+import sword_animated from '../assets/swordhover.png';
+import box from '../assets/boxclosed.png';
+import box_animated from '../assets/boxopen.png';
+import seaweed from '../assets/seaweed.svg';
+import trans from '../assets/1024px-HD_transparent_picture.png';
 
-function Events() {
+export default function Events() {
   const [isHoveringSword, setIsHoveringSword] = useState(false);
   const [isHoveringBox, setIsHoveringBox] = useState(false);
   const [isHoveringHelmet, setIsHoveringHelmet] = useState(false);
@@ -244,4 +244,3 @@ function Events() {
   );
 }
 
-export default Events;

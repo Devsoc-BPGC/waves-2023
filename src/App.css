@@ -5,3 +5,32 @@
 .app-container {
   overflow: hidden;
 }
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #0c3a4b;
+}
+
+body::-webkit-scrollbar-track {
+  background: #392e3d;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #5651b7;
+  border-radius: 0.5rem;
+  background: rgb(112, 107, 208);
+  background: linear-gradient(
+    to bottom,
+    #0c3a4b,
+    #184454,
+    #205462,
+    #275b6c,
+    #bcbccb
+  );
+  border: 1px solid rgba(86, 81, 183, 0.5);
+}

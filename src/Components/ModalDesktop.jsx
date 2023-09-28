@@ -234,7 +234,7 @@ const ModalDesktop = props => {
           >
             <motion.div
               style={
-                CircleCol === 'Sponsor'
+                CircleCol === 'Sponsors'
                   ? style('rgba(217, 217, 217, 0.15)', 2, 1)
                   : style('rgba(217, 217, 217, 0.15)', 2, 0)
               }

@@ -5,7 +5,7 @@ const Footer = () => {
       style={{ color: 'white', fontSize: '1rem', backgroundColor: 'black' }}
     >
       Made with ❤️ by{' '}
-      <a href='https://devsoc.club' style={{ color: 'white' }}>
+      <a href='https://devsoc.club' style={{ color: '#ADD8E6' }}>
         DevSoc
       </a>
     </footer>

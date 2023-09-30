@@ -16,14 +16,17 @@ export default function Carousel() {
         const scrollAmount = event.deltaY;
         const maxScrollLeft = container.scrollWidth - container.clientWidth;
 
+        const scrollDistance = (container.clientWidth * 700) / 1440;
+        console.log(container.clientWidth);
+
         if (container.scrollLeft + scrollAmount >= maxScrollLeft) {
           requestAnimationFrame(() => {
-            container.scrollLeft = 700;
+            container.scrollLeft = scrollDistance;
           });
           event.preventDefault();
         } else if (container.scrollLeft + scrollAmount <= 0) {
           requestAnimationFrame(() => {
-            container.scrollLeft = maxScrollLeft - 700;
+            container.scrollLeft = maxScrollLeft - scrollDistance;
           });
           event.preventDefault();
         } else {
@@ -82,7 +85,7 @@ export default function Carousel() {
           >
             {images.map((image, index) => (
               <Image
-                // key={index}
+                key={index}
                 src={image.src}
                 w={['100%', '100%', '35%']}
                 flex='1'
@@ -90,7 +93,7 @@ export default function Carousel() {
             ))}
             {images.map((image, index) => (
               <Image
-                // key={index}
+                key={index}
                 src={image.src}
                 w={['100%', '100%', '35%']}
                 flex='1'

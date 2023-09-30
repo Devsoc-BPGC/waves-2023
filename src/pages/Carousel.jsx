@@ -18,12 +18,12 @@ export default function Carousel() {
 
         if (container.scrollLeft + scrollAmount >= maxScrollLeft) {
           requestAnimationFrame(() => {
-            container.scrollLeft = 0;
+            container.scrollLeft = 700;
           });
           event.preventDefault();
         } else if (container.scrollLeft + scrollAmount <= 0) {
           requestAnimationFrame(() => {
-            container.scrollLeft = maxScrollLeft;
+            container.scrollLeft = maxScrollLeft - 700;
           });
           event.preventDefault();
         } else {
@@ -67,25 +67,36 @@ export default function Carousel() {
         alignItems='center'
         overflow='hidden'
       >
-        <div
-          ref={containerRef}
-          style={{
-            display: 'flex',
-            overflowX: 'auto',
-            width: '100%',
-            whiteSpace: 'nowrap',
-            marginTop: '10%',
-            gap: '3%',
-          }}
-        >
-          {images.map((image, index) => (
-            <Image
-              key={index}
-              src={image.src}
-              w={['100%', '100%', '35%']}
-              flex='1'
-            />
-          ))}
+        <div className='carousel-container'>
+          <div
+            ref={containerRef}
+            style={{
+              display: 'flex',
+              overflowX: 'auto',
+              width: '100%',
+              whiteSpace: 'nowrap',
+              marginTop: '10%',
+              gap: '3%',
+            }}
+            className='carousel'
+          >
+            {images.map((image, index) => (
+              <Image
+                // key={index}
+                src={image.src}
+                w={['100%', '100%', '35%']}
+                flex='1'
+              />
+            ))}
+            {images.map((image, index) => (
+              <Image
+                // key={index}
+                src={image.src}
+                w={['100%', '100%', '35%']}
+                flex='1'
+              />
+            ))}
+          </div>
         </div>
       </Box>
     </ChakraProvider>

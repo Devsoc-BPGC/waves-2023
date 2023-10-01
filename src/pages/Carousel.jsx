@@ -15,8 +15,12 @@ export default function Carousel() {
       if (isMouseOverCarousel && event.deltaMode === 0) {
         const scrollAmount = event.deltaY;
         const maxScrollLeft = container.scrollWidth - container.clientWidth;
-
-        const scrollDistance = (container.clientWidth * 700) / 1440;
+        let scrollDistance;
+        if (container.clientWidth >= 768) {
+          scrollDistance = (container.clientWidth * 700) / 1440;
+        } else {
+          scrollDistance = (container.clientWidth * 2367) / 767;
+        }
         console.log(container.clientWidth);
 
         if (container.scrollLeft + scrollAmount >= maxScrollLeft) {

@@ -19,11 +19,15 @@ import box from './boxclosed.png';
 import box_animated from './boxopen.png';
 import seaweed from './seaweed.svg';
 import trans from '../../assets/1024px-HD_transparent_picture.png';
+import Scroll from '../scroll/scroll';
 
 function Events() {
   const [isHoveringSword, setIsHoveringSword] = useState(false);
   const [isHoveringBox, setIsHoveringBox] = useState(false);
   const [isHoveringHelmet, setIsHoveringHelmet] = useState(false);
+  const [showScroll, setShowScroll] = useState(false);
+  const [scrollHead, setScrollHead] = useState('');
+  const [scrollContent, setScrollContent] = useState('');
   const zoomInOnHover = {
     transform: 'scale(1)',
     transition: 'transform 0.5s',
@@ -38,6 +42,12 @@ function Events() {
   const [jellyfishStyle, setJellyfishStyle] = useState(zoomInOnHover);
   return (
     <ChakraProvider theme={theme}>
+      <Scroll
+        showScroll={showScroll}
+        setShowScroll={setShowScroll}
+        scrollHead={scrollHead}
+        scrollContent={scrollContent}
+      />
       <Box position='relative'>
         <Image
           src={bgimage}
@@ -84,7 +94,13 @@ function Events() {
               width='314px'
               height='221px'
               zIndex='1'
+              cursor='pointer'
               style={jellyfishStyle}
+              onClick={() => {
+                setScrollHead('FLORENCE');
+                setScrollContent('FLORENCE is a good event ig');
+                setShowScroll(!showScroll);
+              }}
               onMouseEnter={() => {
                 setJellyfishStyle(zoomOutOnHover);
               }}
@@ -112,6 +128,12 @@ function Events() {
               width='135.40px'
               height='117.10px'
               zIndex='1'
+              cursor='pointer'
+              onClick={() => {
+                setScrollHead('EXTRAS');
+                setScrollContent('EXTRAS is a good event ig');
+                setShowScroll(!showScroll);
+              }}
             />
             <Text
               fontSize='22'
@@ -133,6 +155,12 @@ function Events() {
               width='251.582px'
               height='280.858px'
               zIndex='1'
+              cursor='pointer'
+              onClick={() => {
+                setScrollHead('FILM & PHOTOGRAPHY');
+                setScrollContent('FILM & PHOTOGRAPHY is a good event ig');
+                setShowScroll(!showScroll);
+              }}
               onMouseEnter={() => setIsHoveringHelmet(true)}
               onMouseLeave={() => setIsHoveringHelmet(false)}
               style={{
@@ -161,6 +189,7 @@ function Events() {
               pos='absolute'
               bottom='60%'
               left='-10%'
+              cursor='pointer'
               onMouseEnter={() => setIsHoveringSword(true)}
               onMouseLeave={() => setIsHoveringSword(false)}
               style={{
@@ -175,6 +204,12 @@ function Events() {
               pos='absolute'
               bottom='60%'
               left='-10%'
+              cursor='pointer'
+              onClick={() => {
+                setScrollHead('THE QUIZ FEST');
+                setScrollContent('THE QUIZ FEST is a good event ig');
+                setShowScroll(!showScroll);
+              }}
               onMouseEnter={() => setIsHoveringSword(true)}
               onMouseLeave={() => setIsHoveringSword(false)}
               style={{
@@ -204,6 +239,7 @@ function Events() {
               pos='absolute'
               bottom='100%'
               left='-10%'
+              cursor='pointer'
               opacity={isHoveringBox ? 0 : 1}
               onMouseEnter={() => setIsHoveringBox(true)}
               onMouseLeave={() => setIsHoveringBox(false)}
@@ -220,7 +256,13 @@ function Events() {
               pos='absolute'
               bottom='100%'
               left='-10%'
+              cursor='pointer'
               opacity={isHoveringBox ? 1 : 0}
+              onClick={() => {
+                setScrollHead('BEAU VISTA');
+                setScrollContent('BEAU VISTA is a good event ig');
+                setShowScroll(!showScroll);
+              }}
               onMouseEnter={() => setIsHoveringBox(true)}
               onMouseLeave={() => setIsHoveringBox(false)}
               style={{

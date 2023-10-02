@@ -282,7 +282,7 @@ const ModalDesktop = props => {
                       >
                         {CircleCol}
                       </Heading>
-                      {CircleCol == '' ? <Image src={picture} /> : null}
+                      {CircleCol === '' ? <Image src={picture} /> : null}
                     </motion.div>
                   </motion.div>
                 </motion.div>

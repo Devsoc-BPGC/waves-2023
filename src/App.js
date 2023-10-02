@@ -1,5 +1,6 @@
 import React from 'react';
-import { ChakraProvider, Box, theme } from '@chakra-ui/react';
+import { ChakraProvider, Box, theme, Show } from '@chakra-ui/react';
+import EventsMobile from './Components/Events/EventsMobile';
 import Events from './Components/Events/events';
 import './App.css';
 import HomePage from './Pages/HomePage';
@@ -12,7 +13,12 @@ function App() {
         <div style={{ overflowX: 'hidden' }}>
           <HomePage />
         </div>
-        <Events />
+        <Show above='750px'>
+          <Events />
+        </Show>
+        <Show below='749px'>
+          <EventsMobile />
+        </Show>
         <Footer />
       </Box>
     </ChakraProvider>

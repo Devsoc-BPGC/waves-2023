@@ -16,12 +16,14 @@ export default function Carousel() {
         const scrollAmount = event.deltaY;
         const maxScrollLeft = container.scrollWidth - container.clientWidth;
         let scrollDistance;
-        if (container.clientWidth >= 768) {
-          scrollDistance = (container.clientWidth * 700) / 1440;
-        } else {
-          scrollDistance = (container.clientWidth * 2367) / 767;
-        }
+
         console.log(container.clientWidth);
+        console.log(container.scrollLeft);
+        if (container.clientWidth >= 768) {
+          scrollDistance = (container.clientWidth * 3874) / 768;
+        } else {
+          scrollDistance = (container.clientWidth * 6940) / 767;
+        }
 
         if (container.scrollLeft + scrollAmount >= maxScrollLeft) {
           requestAnimationFrame(() => {
@@ -30,7 +32,12 @@ export default function Carousel() {
           event.preventDefault();
         } else if (container.scrollLeft + scrollAmount <= 0) {
           requestAnimationFrame(() => {
-            container.scrollLeft = maxScrollLeft - scrollDistance;
+            // container.scrollLeft = maxScrollLeft - scrollDistance;
+            if (container.clientWidth >= 768) {
+              container.scrollLeft = (container.clientWidth * 8760) / 1440;
+            } else {
+              container.scrollLeft = (container.clientWidth * 7725) / 767;
+            }
           });
           event.preventDefault();
         } else {
@@ -91,15 +98,17 @@ export default function Carousel() {
               <Image
                 key={index}
                 src={image.src}
-                w={['100%', '100%', '35%']}
                 flex='1'
+                aspectRatio={3 / 2}
+                w={['60%', '60%', '35%']}
               />
             ))}
             {images.map((image, index) => (
               <Image
                 key={index}
                 src={image.src}
-                w={['100%', '100%', '35%']}
+                aspectRatio={3 / 2}
+                w={['60%', '60%', '35%']}
                 flex='1'
               />
             ))}

@@ -19,11 +19,57 @@ import box from './boxclosed.png';
 import box_animated from './boxopen.png';
 // import seaweed from './seaweed.svg';
 import trans from '../../assets/1024px-HD_transparent_picture.png';
+import Scroll from '../scroll/scroll';
 
 function Events() {
   const [isHoveringSword, setIsHoveringSword] = useState(false);
   const [isHoveringBox, setIsHoveringBox] = useState(false);
   const [isHoveringHelmet, setIsHoveringHelmet] = useState(false);
+  const [showScroll, setShowScroll] = useState(false);
+  const [scrollHead, setScrollHead] = useState('');
+  const florenceEvents = [
+    'Natyanjali',
+    'Sizzle',
+    'Dancing Duo',
+    'Nritya Kala',
+    'Rangmanch',
+    'Nukkad Natak',
+    'Hear Me Out!',
+    'Rapsody',
+    'Jukebox',
+    'Solonote',
+    'Silence of the Amps',
+    'Indian Rock',
+  ];
+  const beauVistaEvents = [
+    "Let's Not Get Wasted",
+    'Kick StART',
+    'Moteef',
+    'Artathon',
+    'Blind Art',
+    'Glam Up!',
+    'La Croquis Marquee',
+    'Pixel Vista',
+  ];
+  const carpeDictumEvents = [
+    'InVerse',
+    'Cultural Gauntlet',
+    'The Lit Quiz',
+    'Word Games',
+    'Melas',
+    'Querencia',
+  ];
+  const fNPhotoEvents = ['SHo(r)t', 'Oh Snap!'];
+  const quizFestEvents = ['Waves Open', 'Mythomagic', 'Vices Quiz'];
+  const specialsEvents = [
+    'Fashion Parade',
+    'Mr and Miss Waves',
+    'Show me the Funny',
+    'Strangely Familiar',
+    'Comic Kriya',
+    'Irshaad',
+  ];
+  const [eventsList, setEventsList] = useState(['']);
   const zoomInOnHover = {
     transform: 'scale(1)',
     transition: 'transform 0.5s',
@@ -38,6 +84,12 @@ function Events() {
   const [jellyfishStyle, setJellyfishStyle] = useState(zoomInOnHover);
   return (
     <ChakraProvider theme={theme}>
+      <Scroll
+        showScroll={showScroll}
+        setShowScroll={setShowScroll}
+        scrollHead={scrollHead}
+        eventsList={eventsList}
+      />
       <Box position='relative'>
         <Image
           src={bgimage}
@@ -64,11 +116,11 @@ function Events() {
           {methods => <></>}
         </WaterWave>
         <Flex direction='column'>
-          <Box position='absolute' top='5%' left='30%'>
+          <Box position='absolute' top='5%' right='35%'>
             <div
               style={{
                 color: 'white',
-                fontSize: '7.5vw',
+                fontSize: 96,
                 fontFamily: 'Junge',
                 fontWeight: '400',
                 wordWrap: 'break-word',
@@ -77,14 +129,20 @@ function Events() {
               E V E N T S
             </div>
           </Box>
-          <Box position='absolute' top='12%' right='2%'>
+          <Box position='absolute' top='5%' right='5%'>
             <Image
               src={jellyfish}
               alt='Jellyfish'
               width='314px'
               height='221px'
               zIndex='1'
+              cursor='pointer'
               style={jellyfishStyle}
+              onClick={() => {
+                setScrollHead('FLORENCE');
+                setEventsList(florenceEvents);
+                setShowScroll(!showScroll);
+              }}
               onMouseEnter={() => {
                 setJellyfishStyle(zoomOutOnHover);
               }}
@@ -105,13 +163,19 @@ function Events() {
           </Box>
         </Flex>
         <Flex direction='column'>
-          <Box position='absolute' top='10%' left='3%'>
+          <Box position='absolute' top='2%' left='5%'>
             <Image
               src={horsewheel}
               alt='Horsewheel'
               width='135.40px'
               height='117.10px'
               zIndex='1'
+              cursor='pointer'
+              onClick={() => {
+                setScrollHead('EXTRAS');
+                setEventsList(specialsEvents);
+                setShowScroll(!showScroll);
+              }}
             />
             <Text
               fontSize='22'
@@ -126,19 +190,24 @@ function Events() {
           </Box>
         </Flex>
         <Flex>
-          <Box position='absolute' bottom='2%' right='5%' alignItems={'center'}>
+          <Box position='absolute' bottom='2%' right='5%'>
             <Image
               src={isHoveringHelmet ? helmet_animated : spartanhelmet}
               alt='Spartan'
               width='251.582px'
               height='280.858px'
               zIndex='1'
+              cursor='pointer'
+              onClick={() => {
+                setScrollHead('FILM & PHOTOGRAPHY');
+                setEventsList(fNPhotoEvents);
+                setShowScroll(!showScroll);
+              }}
               onMouseEnter={() => setIsHoveringHelmet(true)}
               onMouseLeave={() => setIsHoveringHelmet(false)}
               style={{
                 transition: '0.5s',
               }}
-              marginBottom='-4rem'
             />
             <Text
               fontSize='22'
@@ -153,7 +222,7 @@ function Events() {
           </Box>
         </Flex>
         <Flex direction='column'>
-          <Box position='absolute' bottom='30%' left='14%'>
+          <Box position='absolute' bottom='20%' left='14%'>
             <Image
               src={swords}
               opacity={isHoveringSword ? 0 : 1}
@@ -162,7 +231,7 @@ function Events() {
               pos='absolute'
               bottom='60%'
               left='-10%'
-              marginBottom='-4rem'
+              cursor='pointer'
               onMouseEnter={() => setIsHoveringSword(true)}
               onMouseLeave={() => setIsHoveringSword(false)}
               style={{
@@ -177,7 +246,12 @@ function Events() {
               pos='absolute'
               bottom='60%'
               left='-10%'
-              marginBottom='-4rem'
+              cursor='pointer'
+              onClick={() => {
+                setScrollHead('THE QUIZ FEST');
+                setEventsList(quizFestEvents);
+                setShowScroll(!showScroll);
+              }}
               onMouseEnter={() => setIsHoveringSword(true)}
               onMouseLeave={() => setIsHoveringSword(false)}
               style={{
@@ -185,13 +259,11 @@ function Events() {
               }}
             />
             <Text
-              position={'relative'}
               fontSize='22'
               fontWeight='400'
               fontFamily='Inknut Antiqua'
               wordBreak='break-word'
               color='white'
-              zIndex={1}
             >
               {' '}
               THE QUIZ FEST{' '}
@@ -199,7 +271,7 @@ function Events() {
           </Box>
         </Flex>
         <Flex>
-          <Box position='absolute' bottom='0%' left='30%'>
+          <Box position='absolute' bottom='0%' left='27%'>
             <Image
               src={box}
               alt='Box'
@@ -209,6 +281,7 @@ function Events() {
               pos='absolute'
               bottom='100%'
               left='-10%'
+              cursor='pointer'
               opacity={isHoveringBox ? 0 : 1}
               onMouseEnter={() => setIsHoveringBox(true)}
               onMouseLeave={() => setIsHoveringBox(false)}
@@ -225,7 +298,13 @@ function Events() {
               pos='absolute'
               bottom='100%'
               left='-10%'
+              cursor='pointer'
               opacity={isHoveringBox ? 1 : 0}
+              onClick={() => {
+                setScrollHead('BEAU VISTA');
+                setEventsList(beauVistaEvents);
+                setShowScroll(!showScroll);
+              }}
               onMouseEnter={() => setIsHoveringBox(true)}
               onMouseLeave={() => setIsHoveringBox(false)}
               style={{

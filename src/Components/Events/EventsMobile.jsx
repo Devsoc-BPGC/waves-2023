@@ -8,10 +8,17 @@ import token2 from './token2.png';
 import token3 from './token3.png';
 import token4 from './token4.png';
 import token5 from './token5.png';
-import token6 from './token6.png';
+// import token6 from './token6.png';
 
 const EventsMobile = () => {
-  const images = [token1, token2, token3, token4, token5, token6];
+  const images = [token1, token2, token3, token4, token5]; //token6
+  const text = [
+    'FLORENCE',
+    'FILM & PHOTOGRAPH',
+    'BEAU VISTA',
+    'THE QUIZ FEST',
+    'EXTRAS',
+  ];
   const variants = {
     enter: direction => {
       return {
@@ -61,7 +68,7 @@ const EventsMobile = () => {
           style={{
             color: 'white',
             fontFamily: 'Junge',
-            fontSize: 64,
+            fontSize: '10vw',
             fontWeight: '400',
             wordWrap: 'break-word',
             flex: 'auto',
@@ -75,11 +82,11 @@ const EventsMobile = () => {
             key={page}
             style={{
               position: 'absolute',
-              borderRadius: '10%',
               backgroundImage: `url(${images[imageIndex]})`,
-              backgroundSize: 'contain',
-              height: '100px',
-              width: '100px',
+              backgroundSize: '6rem',
+              backgroundRepeat: 'no-repeat',
+              height: '12rem',
+              width: '6rem',
               marginTop: '8rem',
             }}
             drag='x'
@@ -102,7 +109,24 @@ const EventsMobile = () => {
                 paginate(-1);
               }
             }}
-          ></motion.div>
+          >
+            <div
+              style={{
+                color: 'white',
+                fontFamily: 'Junge',
+                fontSize: '7vw',
+                fontWeight: '400',
+                wordWrap: 'normal',
+                flex: 'auto',
+                marginTop: '8rem',
+                width: '300%',
+                textAlign: 'center',
+                marginLeft: '-100%',
+              }}
+            >
+              {text[imageIndex]}
+            </div>
+          </motion.div>
         </AnimatePresence>
       </Box>
     </Box>

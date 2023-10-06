@@ -20,7 +20,7 @@ export default function Register() {
         bgImg={background_img}
         bgSize='cover'
         color='white'
-        boxShadow='0px 0px 20px #add8e6'
+        boxshadow='0px 0px 20px #add8e6'
         _hover={{
           height: '2.5rem',
           width: '14rem',

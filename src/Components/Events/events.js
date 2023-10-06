@@ -8,7 +8,6 @@ import {
   Flex,
   Text,
 } from '@chakra-ui/react';
-import Fonts from '../Fonts';
 import bgimage from './bgimage.png';
 import jellyfish from './jellyfish.svg';
 import horsewheel from './horsewheel.svg';

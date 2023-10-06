@@ -27,7 +27,49 @@ function Events() {
   const [isHoveringHelmet, setIsHoveringHelmet] = useState(false);
   const [showScroll, setShowScroll] = useState(false);
   const [scrollHead, setScrollHead] = useState('');
-  const [scrollContent, setScrollContent] = useState('');
+  const florenceEvents = [
+    'Natyanjali',
+    'Sizzle',
+    'Dancing Duo',
+    'Nritya Kala',
+    'Rangmanch',
+    'Nukkad Natak',
+    'Hear Me Out!',
+    'Rapsody',
+    'Jukebox',
+    'Solonote',
+    'Silence of the Amps',
+    'Indian Rock',
+  ];
+  const beauVistaEvents = [
+    "Let's Not Get Wasted",
+    'Kick StART',
+    'Moteef',
+    'Artathon',
+    'Blind Art',
+    'Glam Up!',
+    'La Croquis Marquee',
+    'Pixel Vista',
+  ];
+  const carpeDictumEvents = [
+    'InVerse',
+    'Cultural Gauntlet',
+    'The Lit Quiz',
+    'Word Games',
+    'Melas',
+    'Querencia',
+  ];
+  const fNPhotoEvents = ['SHo(r)t', 'Oh Snap!'];
+  const quizFestEvents = ['Waves Open', 'Mythomagic', 'Vices Quiz'];
+  const specialsEvents = [
+    'Fashion Parade',
+    'Mr and Miss Waves',
+    'Show me the Funny',
+    'Strangely Familiar',
+    'Comic Kriya',
+    'Irshaad',
+  ];
+  const [eventsList, setEventsList] = useState(['']);
   const zoomInOnHover = {
     transform: 'scale(1)',
     transition: 'transform 0.5s',
@@ -46,7 +88,7 @@ function Events() {
         showScroll={showScroll}
         setShowScroll={setShowScroll}
         scrollHead={scrollHead}
-        scrollContent={scrollContent}
+        eventsList={eventsList}
       />
       <Box position='relative'>
         <Image
@@ -98,7 +140,7 @@ function Events() {
               style={jellyfishStyle}
               onClick={() => {
                 setScrollHead('FLORENCE');
-                setScrollContent('FLORENCE is a good event ig');
+                setEventsList(florenceEvents);
                 setShowScroll(!showScroll);
               }}
               onMouseEnter={() => {
@@ -131,7 +173,7 @@ function Events() {
               cursor='pointer'
               onClick={() => {
                 setScrollHead('EXTRAS');
-                setScrollContent('EXTRAS is a good event ig');
+                setEventsList(specialsEvents);
                 setShowScroll(!showScroll);
               }}
             />
@@ -158,7 +200,7 @@ function Events() {
               cursor='pointer'
               onClick={() => {
                 setScrollHead('FILM & PHOTOGRAPHY');
-                setScrollContent('FILM & PHOTOGRAPHY is a good event ig');
+                setEventsList(fNPhotoEvents);
                 setShowScroll(!showScroll);
               }}
               onMouseEnter={() => setIsHoveringHelmet(true)}
@@ -207,7 +249,7 @@ function Events() {
               cursor='pointer'
               onClick={() => {
                 setScrollHead('THE QUIZ FEST');
-                setScrollContent('THE QUIZ FEST is a good event ig');
+                setEventsList(quizFestEvents);
                 setShowScroll(!showScroll);
               }}
               onMouseEnter={() => setIsHoveringSword(true)}
@@ -260,7 +302,7 @@ function Events() {
               opacity={isHoveringBox ? 1 : 0}
               onClick={() => {
                 setScrollHead('BEAU VISTA');
-                setScrollContent('BEAU VISTA is a good event ig');
+                setEventsList(beauVistaEvents);
                 setShowScroll(!showScroll);
               }}
               onMouseEnter={() => setIsHoveringBox(true)}

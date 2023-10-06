@@ -12,10 +12,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import scrollimg from './scroll.png';
 import scrollLeft from './scrollLeft.png';
 import scrollRight from './scrollRight.png';
+import teer from './teer.png';
 
 const Scroll = props => {
+  const [index, setIndex] = useState(0);
   const clickHandler = () => {
     props.setShowScroll(!props.showScroll);
+    setIndex(0);
   };
   return (
     <AnimatePresence>
@@ -74,21 +77,59 @@ const Scroll = props => {
             animate={{ height: '69vh', width: '99vh' }}
             exit={{ height: '69vh', width: '0vh', transitionDuration: '0.5s' }}
           >
-            <Flex justify='center' align='start' width='60%' height='70%'>
-              <Flex
-                style={{
-                  width: '90%',
-                  height: '90%',
-                  justifyContent: 'space-evenly',
-                  alignItems: 'center',
-                  flexDirection: 'column',
-                }}
-              >
-                <h1>{props.scrollHead}</h1>
-                <p>{props.scrollContent}</p>
+            <Flex
+              flexDir='column'
+              justify='start'
+              align='center'
+              width='60%'
+              height='70%'
+            >
+              <Flex width='100%' height='20%'>
+                <Flex
+                  style={{
+                    width: '95%',
+                    justifyContent: 'space-evenly',
+                    alignItems: 'center',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <h1>{props.scrollHead}</h1>
+                </Flex>
+                <Flex onClick={clickHandler} cursor='pointer'>
+                  &times;
+                </Flex>
               </Flex>
-              <Flex onClick={clickHandler} cursor='pointer'>
-                &times;
+              <Flex width='100%' height='80%' justify='center' align='center'>
+                <Flex
+                  width='35%'
+                  height='100%'
+                  flexDir='column'
+                  justify='start'
+                  overflowX='hidden'
+                  overflowY='scroll'
+                >
+                  {props.eventsList.map(e => {
+                    return (
+                      <Flex justify='center' align='center' flexDir='column'>
+                        <Flex
+                          width='100%'
+                          fontSize='medium'
+                          px='5'
+                          onClick={() => {
+                            setIndex(props.eventsList.indexOf(e));
+                          }}
+                        >
+                          {e}
+                        </Flex>
+                        <img width='100%' src={teer} alt='arrow'></img>
+                      </Flex>
+                    );
+                  })}
+                </Flex>
+                <Flex width='65%'>
+                  <Flex width='100%'>{props.eventsList[index]}</Flex>
+                  <Flex width='100%'></Flex>
+                </Flex>
               </Flex>
             </Flex>
           </motion.div>

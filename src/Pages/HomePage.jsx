@@ -13,7 +13,7 @@ import { AnimatePresence } from 'framer-motion';
 import RotateButton from '../Components/RotateButton';
 import ModalDesktop from '../Components/ModalDesktop';
 import waves_logo from '../assets/Waves-logo.png';
-import main_page_bg from '../assets/main_page_bg.png';
+import waves_background from '../assets/waves_background.jpg';
 import main_page_bg_phone from '../assets/main_page_bg_phone.png';
 import Register from '../Components/Register';
 import trans from '../assets/1024px-HD_transparent_picture.png';
@@ -32,7 +32,7 @@ export default function HomePage() {
           fontSize='xl'
           bgSize='cover'
           bgRepeat='no-repeat'
-          bgImg={isSmallerThan600 ? main_page_bg_phone : main_page_bg}
+          bgImg={isSmallerThan600 ? main_page_bg_phone : waves_background}
           minH='100vh'
           justify='space-between'
           flexDir='column'

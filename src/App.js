@@ -6,6 +6,7 @@ import './App.css';
 import HomePage from './Pages/HomePage';
 import './App.css';
 import Footer from './Components/Footer';
+import Carousel from './Pages/Carousel';
 function App() {
   return (
     <ChakraProvider theme={theme}>
@@ -19,6 +20,7 @@ function App() {
         <Show below='749px'>
           <EventsMobile />
         </Show>
+        <Carousel />
         <Footer />
       </Box>
     </ChakraProvider>

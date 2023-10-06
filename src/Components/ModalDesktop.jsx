@@ -35,7 +35,7 @@ const ModalDesktop = props => {
       alignItems: 'center',
       justifyContent: 'center',
       zIndex: zI,
-      boxShadow: radius,
+      boxshadow: radius,
       cursor: 'pointer',
     };
   };
@@ -255,7 +255,7 @@ const ModalDesktop = props => {
                       : style('rgba(217, 217, 217, 0.25)', 4, 0)
                   }
                   variants={circleVariant(122)}
-                  boxShadow='dark-lg'
+                  boxshadow='dark-lg'
                 >
                   <motion.div
                     style={
@@ -264,7 +264,7 @@ const ModalDesktop = props => {
                         : style('rgba(217, 217, 217, 0.30)', 5, 0)
                     }
                     variants={circleVariant(95)}
-                    boxShadow='dark-lg'
+                    boxshadow='dark-lg'
                   >
                     <motion.div
                       style={
@@ -273,7 +273,7 @@ const ModalDesktop = props => {
                           : style('rgba(217, 217, 217, 0.60)', 6, 0)
                       }
                       variants={circleVariant(68)}
-                      boxShadow='dark-lg'
+                      boxshadow='dark-lg'
                     >
                       <Heading
                         size='3xl'

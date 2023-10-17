@@ -9,16 +9,70 @@ import token3 from './token3.png';
 import token4 from './token4.png';
 import token5 from './token5.png';
 // import token6 from './token6.png';
+import Scroll from '../scroll/scroll';
+import Fonts from '../Fonts';
 
 const EventsMobile = () => {
   const images = [token1, token2, token3, token4, token5]; //token6
   const text = [
     'FLORENCE',
-    'FILM & PHOTOGRAPH',
+    'FILM & PHOTOGRAPHY',
     'BEAU VISTA',
     'THE QUIZ FEST',
     'EXTRAS',
   ];
+  const [showScroll, setShowScroll] = useState(false);
+  const [scrollHead, setScrollHead] = useState('');
+  const florenceEvents = [
+    'Natyanjali',
+    'Sizzle',
+    'Dancing Duo',
+    'Nritya Kala',
+    'Rangmanch',
+    'Nukkad Natak',
+    'Hear Me Out!',
+    'Rapsody',
+    'Jukebox',
+    'Solonote',
+    'Silence of the Amps',
+    'Indian Rock',
+  ];
+  const beauVistaEvents = [
+    "Let's Not Get Wasted",
+    'Kick StART',
+    'Moteef',
+    'Artathon',
+    'Blind Art',
+    'Glam Up!',
+    'La Croquis Marquee',
+    'Pixel Vista',
+  ];
+  const carpeDictumEvents = [
+    'InVerse',
+    'Cultural Gauntlet',
+    'The Lit Quiz',
+    'Word Games',
+    'Melas',
+    'Querencia',
+  ];
+  const fNPhotoEvents = ['SHo(r)t', 'Oh Snap!'];
+  const quizFestEvents = ['Waves Open', 'Mythomagic', 'Vices Quiz'];
+  const specialsEvents = [
+    'Fashion Parade',
+    'Mr and Miss Waves',
+    'Show me the Funny',
+    'Strangely Familiar',
+    'Comic Kriya',
+    'Irshaad',
+  ];
+  const events = [
+    florenceEvents,
+    fNPhotoEvents,
+    beauVistaEvents,
+    quizFestEvents,
+    specialsEvents,
+  ];
+  const [eventsList, setEventsList] = useState(['']);
   const variants = {
     enter: direction => {
       return {
@@ -53,6 +107,13 @@ const EventsMobile = () => {
   };
   return (
     <Box position='relative'>
+      <Fonts />
+      <Scroll
+        showScroll={showScroll}
+        setShowScroll={setShowScroll}
+        scrollHead={scrollHead}
+        eventsList={eventsList}
+      />
       <Image src={bgimg} height='100vh' width='200vw' />
       <Box
         position={'absolute'}
@@ -67,7 +128,7 @@ const EventsMobile = () => {
         <div
           style={{
             color: 'white',
-            fontFamily: 'Junge',
+            fontFamily: '"Dalek", cursive',
             fontSize: '10vw',
             fontWeight: '400',
             wordWrap: 'break-word',
@@ -90,6 +151,11 @@ const EventsMobile = () => {
               marginTop: '8rem',
             }}
             drag='x'
+            onClick={() => {
+              setScrollHead(text[imageIndex]);
+              setEventsList(events[imageIndex]);
+              setShowScroll(!showScroll);
+            }}
             dragConstraints={{ left: 0, right: 0 }}
             custom={direction}
             variants={variants}
@@ -113,7 +179,7 @@ const EventsMobile = () => {
             <div
               style={{
                 color: 'white',
-                fontFamily: 'Junge',
+                fontFamily: '"Dalek", cursive',
                 fontSize: '7vw',
                 fontWeight: '400',
                 wordWrap: 'normal',

@@ -20,6 +20,7 @@ import box_animated from './boxopen.png';
 // import seaweed from './seaweed.svg';
 import trans from '../../assets/1024px-HD_transparent_picture.png';
 import Scroll from '../scroll/scroll';
+import Fonts from '../Fonts';
 
 function Events() {
   const [isHoveringSword, setIsHoveringSword] = useState(false);
@@ -84,6 +85,7 @@ function Events() {
   const [jellyfishStyle, setJellyfishStyle] = useState(zoomInOnHover);
   return (
     <ChakraProvider theme={theme}>
+      <Fonts />
       <Scroll
         showScroll={showScroll}
         setShowScroll={setShowScroll}
@@ -121,7 +123,7 @@ function Events() {
               style={{
                 color: 'white',
                 fontSize: 96,
-                fontFamily: 'Junge',
+                fontFamily: '"Dalek", cursive',
                 fontWeight: '400',
                 wordWrap: 'break-word',
               }}
@@ -153,7 +155,7 @@ function Events() {
             <Text
               fontSize='22'
               fontWeight='400'
-              fontFamily='Inknut Antiqua'
+              fontFamily='"Dalek", cursive'
               wordBreak='break-word'
               color='white'
             >
@@ -180,7 +182,7 @@ function Events() {
             <Text
               fontSize='22'
               fontWeight='400'
-              fontFamily='Inknut Antiqua'
+              fontFamily='"Dalek", cursive'
               wordBreak='break-word'
               color='white'
             >
@@ -212,7 +214,7 @@ function Events() {
             <Text
               fontSize='22'
               fontWeight='400'
-              fontFamily='Inknut Antiqua'
+              fontFamily='"Dalek", cursive'
               wordBreak='break-word'
               color='white'
             >
@@ -261,7 +263,7 @@ function Events() {
             <Text
               fontSize='22'
               fontWeight='400'
-              fontFamily='Inknut Antiqua'
+              fontFamily='"Dalek", cursive'
               wordBreak='break-word'
               color='white'
             >
@@ -314,7 +316,7 @@ function Events() {
             <Text
               fontSize='22'
               fontWeight='400'
-              fontFamily='Inknut Antiqua'
+              fontFamily='"Dalek", cursive'
               wordBreak='break-word'
               color='white'
             >

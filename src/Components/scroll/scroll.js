@@ -123,28 +123,44 @@ const Scroll = props => {
                     overflowX='hidden'
                     overflowY='scroll'
                   >
-                    {props.eventsList.map(e => {
+                    {props.eventsList.map((e, ind) => {
                       return (
-                        <Flex justify='center' align='center' flexDir='column'>
+                        <Flex
+                          key={ind}
+                          justify='center'
+                          align='center'
+                          flexDir='column'
+                        >
                           <Flex
                             width='100%'
                             fontSize='2xl'
                             px='5'
                             cursor='pointer'
                             onClick={() => {
-                              setIndex(props.eventsList.indexOf(e));
+                              setIndex(ind);
                             }}
                           >
-                            {e}
+                            {e.name}
                           </Flex>
                           <img width='100%' src={teer} alt='arrow'></img>
                         </Flex>
                       );
                     })}
                   </Flex>
-                  <Flex width='65%'>
-                    <Flex width='100%'>{props.eventsList[index]}</Flex>
-                    <Flex width='100%'></Flex>
+                  <Flex height='100%' width='65%' flexDir='column'>
+                    <Flex fontSize='2.5rem' height='20%' width='100%'>
+                      {props.eventsList[index].name}
+                    </Flex>
+                    <Flex
+                      height='80%'
+                      width='100%'
+                      fontSize='1.5rem'
+                      overflowX='hidden'
+                      overflowY='scroll'
+                      justify='start'
+                    >
+                      {props.eventsList[index].desc}
+                    </Flex>
                   </Flex>
                 </Flex>
               </Flex>

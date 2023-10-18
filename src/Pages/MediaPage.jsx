@@ -3,12 +3,9 @@ import {
   ChakraProvider,
   Box,
   theme,
-  Flex,
-  Spacer,
   Image,
   Grid,
   GridItem,
-  SimpleGrid,
   useMediaQuery,
 } from '@chakra-ui/react';
 import bubble1 from '../assets/image 4.png';
@@ -19,8 +16,6 @@ import underwater from '../assets/underwatersponsors.png';
 export default function MediaPage() {
   const [isSmallerThan600] = useMediaQuery('(max-width: 600px)');
   const [modalOpen, setModalOpen] = useState(false);
-
-  const handleClick = () => setModalOpen(!modalOpen);
 
   return (
     <ChakraProvider theme={theme}>

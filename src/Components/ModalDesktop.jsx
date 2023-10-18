@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { CloseButton, Image, Show, Heading } from '@chakra-ui/react';
 import picture from '../assets/Waves_logo2.png';
 import styles from './ModalDesktop.module.css';
-import { useHref } from 'react-router-dom';
 const CenterText = layer => {
   if (layer === 0) {
     return '';
@@ -190,21 +189,15 @@ const ModalDesktop = props => {
                     onMouseLeave={() => handleMouseLeave(2)}
                   >
                     <motion.div
-                      style={style({ bgColour: 'transparent', isActive: 0 })}
-                      variants={circleVariant2(95)}
-                      onMouseEnter={() => handleMouseEnter(3)}
-                      onMouseLeave={() => handleMouseLeave(3)}
+                      style={style({
+                        bgColour: 'transparent',
+                        isActive: 0,
+                      })}
+                      variants={circleVariant2(68)}
+                      onMouseEnter={() => handleMouseEnter(4)}
+                      onMouseLeave={() => handleMouseLeave(4)}
                     >
-                      <motion.div
-                        style={style({
-                          bgColour: 'transparent',
-                          isActive: 0,
-                        })}
-                        variants={circleVariant2(68)}
-                        onMouseEnter={() => handleMouseEnter(4)}
-                        onMouseLeave={() => handleMouseLeave(4)}
-                      >
-                        {/* <motion.div
+                      {/* <motion.div
                           style={style({
                             bgColour: 'transparent',
                             isActive: 0,
@@ -213,7 +206,6 @@ const ModalDesktop = props => {
                           onMouseEnter={() => handleMouseEnter(5)}
                           onMouseLeave={() => handleMouseLeave(5)}
                         ></motion.div> */}
-                      </motion.div>
                     </motion.div>
                   </motion.div>
                 </a>
@@ -280,7 +272,7 @@ const ModalDesktop = props => {
                     >
                       {CircleCol}
                     </Heading>
-                    {CircleCol == '' ? <Image src={picture} /> : null}
+                    {CircleCol === '' ? <Image src={picture} /> : null}
                   </motion.div>
                 </motion.div>
               </motion.div>

@@ -15,6 +15,7 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: #0c3a4b;
+  cursor: default;
 }
 
 body::-webkit-scrollbar-track {

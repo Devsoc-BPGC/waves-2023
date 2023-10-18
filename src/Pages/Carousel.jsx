@@ -3,6 +3,7 @@ import { ChakraProvider, Box, Image } from '@chakra-ui/react';
 import back_image from '../assets/back_image_page2.jpg';
 import images from './images';
 import './Carousel.css';
+import bg_3 from '../assets/bg_3.png';
 
 export default function Carousel() {
   const containerRef = useRef(null);
@@ -71,7 +72,7 @@ export default function Carousel() {
       <Box
         textAlign='center'
         fontSize='xl'
-        backgroundImage={`url(${back_image})`}
+        backgroundImage={bg_3}
         backgroundSize='cover'
         h='100vh'
         display='flex'

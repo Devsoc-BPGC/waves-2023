@@ -1,7 +1,15 @@
 import React from 'react';
-import './Footer.css';
 const Footer = () => {
-  return <footer className='foot'>Made with ❤️ by DevSoc</footer>;
+  return (
+    <footer
+      style={{ color: 'white', fontSize: '1rem', backgroundColor: 'black' }}
+    >
+      Made with ❤️ by{' '}
+      <a href='https://devsoc.club' style={{ color: '#ADD8E6' }}>
+        DevSoc
+      </a>
+    </footer>
+  );
 };
 
 export default Footer;

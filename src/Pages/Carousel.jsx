@@ -81,6 +81,22 @@ export default function Carousel() {
         alignItems='center'
         overflow='hidden'
       >
+        <Box position='relative' top='5%' right='0%'>
+          <div
+            className='titleFont'
+            style={{
+              color: 'white',
+              fontSize: 96,
+              fontWeight: '200',
+              wordWrap: 'break-word',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            G A L L E R Y
+          </div>
+        </Box>
         <div className='carousel-container'>
           <div
             ref={containerRef}

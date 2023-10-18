@@ -189,22 +189,24 @@ const ModalDesktop = props => {
                     onMouseEnter={() => handleMouseEnter(2)}
                     onMouseLeave={() => handleMouseLeave(2)}
                   >
-                    <motion.div
-                      style={style({ bgColour: 'transparent', isActive: 0 })}
-                      variants={circleVariant2(95)}
-                      onMouseEnter={() => handleMouseEnter(3)}
-                      onMouseLeave={() => handleMouseLeave(3)}
-                    >
+                    <a href='/media'>
                       <motion.div
-                        style={style({
-                          bgColour: 'transparent',
-                          isActive: 0,
-                        })}
-                        variants={circleVariant2(68)}
-                        onMouseEnter={() => handleMouseEnter(4)}
-                        onMouseLeave={() => handleMouseLeave(4)}
+                        style={style({ bgColour: 'transparent', isActive: 0 })}
+                        variants={circleVariant2(95)}
+                        onMouseEnter={() => handleMouseEnter(3)}
+                        onMouseLeave={() => handleMouseLeave(3)}
                       >
-                        {/* <motion.div
+                        <a>
+                          <motion.div
+                            style={style({
+                              bgColour: 'transparent',
+                              isActive: 0,
+                            })}
+                            variants={circleVariant2(68)}
+                            onMouseEnter={() => handleMouseEnter(4)}
+                            onMouseLeave={() => handleMouseLeave(4)}
+                          >
+                            {/* <motion.div
                           style={style({
                             bgColour: 'transparent',
                             isActive: 0,
@@ -213,8 +215,10 @@ const ModalDesktop = props => {
                           onMouseEnter={() => handleMouseEnter(5)}
                           onMouseLeave={() => handleMouseLeave(5)}
                         ></motion.div> */}
+                          </motion.div>
+                        </a>
                       </motion.div>
-                    </motion.div>
+                    </a>
                   </motion.div>
                 </a>
               </motion.div>

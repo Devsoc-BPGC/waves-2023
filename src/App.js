@@ -9,7 +9,6 @@ function App() {
     <Routes>
       <Route path='/' element={<MainPage />}></Route>
       <Route path='/teams' element={<TeamsPage />}></Route>
-      <Route path='/media' element={<MediaPage />}></Route>
     </Routes>
   );
 }

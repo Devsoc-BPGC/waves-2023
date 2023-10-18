@@ -189,7 +189,6 @@ const ModalDesktop = props => {
                     onMouseEnter={() => handleMouseEnter(2)}
                     onMouseLeave={() => handleMouseLeave(2)}
                   >
-                    <a href='/media'>
                       <motion.div
                         style={style({ bgColour: 'transparent', isActive: 0 })}
                         variants={circleVariant2(95)}
@@ -216,7 +215,6 @@ const ModalDesktop = props => {
                         ></motion.div> */}
                         </motion.div>
                       </motion.div>
-                    </a>
                   </motion.div>
                 </a>
               </motion.div>

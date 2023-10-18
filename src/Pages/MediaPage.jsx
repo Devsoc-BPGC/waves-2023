@@ -15,6 +15,7 @@ import bubble1 from '../assets/image 4.png';
 import evilmask from '../assets/maskcropped.png';
 import horsebadge from '../assets/horsdebadge.png';
 import underwater from '../assets/underwatersponsors.png';
+import bg_2 from '../assets/bg_2.png';
 
 export default function MediaPage() {
   const [isSmallerThan600] = useMediaQuery('(max-width: 600px)');
@@ -28,7 +29,7 @@ export default function MediaPage() {
         overflow={'hidden'}
         position={'relative'}
         mt='0rem'
-        bgImage={underwater}
+        bgImage={bg_2}
         bgAttachment='fixed'
         bgRepeat='no-repeat'
         bgSize='cover'

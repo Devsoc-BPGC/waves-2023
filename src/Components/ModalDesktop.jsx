@@ -292,17 +292,6 @@ const ModalDesktop = props => {
           </motion.div>
         </motion.div>
       </Show>
-      <Show below='749px'>
-        <div id='overlay' className={styles['overlay']}>
-          <CloseButton
-            onClick={props.handleClick}
-            style={{ position: 'block', left: '1rem', top: '1rem' }}
-            size='lg'
-            color='white'
-          />
-          <div>Implement for mobile</div>
-        </div>
-      </Show>
     </>
   );
 };

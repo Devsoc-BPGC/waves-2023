@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { CloseButton, Image, Show, Heading } from '@chakra-ui/react';
 import picture from '../assets/Waves_logo2.png';
 import styles from './ModalDesktop.module.css';
+import { useHref } from 'react-router-dom';
 const CenterText = layer => {
   if (layer === 0) {
     return '';
@@ -181,33 +182,41 @@ const ModalDesktop = props => {
                 onMouseEnter={() => handleMouseEnter(1)}
                 onMouseLeave={() => handleMouseLeave(1)}
               >
-                <motion.div
-                  style={style({ bgColour: 'transparent', isActive: 0 })}
-                  variants={circleVariant2(122)}
-                  onMouseEnter={() => handleMouseEnter(2)}
-                  onMouseLeave={() => handleMouseLeave(2)}
-                >
+                <a href='/teams'>
                   <motion.div
                     style={style({ bgColour: 'transparent', isActive: 0 })}
-                    variants={circleVariant2(95)}
-                    onMouseEnter={() => handleMouseEnter(3)}
-                    onMouseLeave={() => handleMouseLeave(3)}
+                    variants={circleVariant2(122)}
+                    onMouseEnter={() => handleMouseEnter(2)}
+                    onMouseLeave={() => handleMouseLeave(2)}
                   >
-                    <motion.div
-                      style={style({ bgColour: 'transparent', isActive: 0 })}
-                      variants={circleVariant2(68)}
-                      onMouseEnter={() => handleMouseEnter(4)}
-                      onMouseLeave={() => handleMouseLeave(4)}
-                    >
-                      {/* <motion.div
+                      <motion.div
                         style={style({ bgColour: 'transparent', isActive: 0 })}
-                        variants={circleVariant2(68)}
-                        onMouseEnter={() => handleMouseEnter(5)}
-                        onMouseLeave={() => handleMouseLeave(5)}
-                      ></motion.div> */}
-                    </motion.div>
+                        variants={circleVariant2(95)}
+                        onMouseEnter={() => handleMouseEnter(3)}
+                        onMouseLeave={() => handleMouseLeave(3)}
+                      >
+                        <motion.div
+                          style={style({
+                            bgColour: 'transparent',
+                            isActive: 0,
+                          })}
+                          variants={circleVariant2(68)}
+                          onMouseEnter={() => handleMouseEnter(4)}
+                          onMouseLeave={() => handleMouseLeave(4)}
+                        >
+                          {/* <motion.div
+                          style={style({
+                            bgColour: 'transparent',
+                            isActive: 0,
+                          })}
+                          variants={circleVariant2(68)}
+                          onMouseEnter={() => handleMouseEnter(5)}
+                          onMouseLeave={() => handleMouseLeave(5)}
+                        ></motion.div> */}
+                        </motion.div>
+                      </motion.div>
                   </motion.div>
-                </motion.div>
+                </a>
               </motion.div>
             </motion.div>
           </motion.div>

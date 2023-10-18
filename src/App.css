@@ -2,6 +2,7 @@
   font-family: Dalek;
   src: url(assets/fonts/Dalek.ttf);
 }
+@import url('https://fonts.googleapis.com/css2?family=Almendra&family=Inter&family=Junge&family=Montserrat:wght@500&family=Poppins:ital,wght@1,300;1,600;1,900&family=Skranji&display=swap');
 .app-container {
   overflow: hidden;
 }

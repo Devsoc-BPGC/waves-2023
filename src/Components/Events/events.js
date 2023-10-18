@@ -7,6 +7,7 @@ import {
   Image,
   Flex,
   Text,
+  Center,
 } from '@chakra-ui/react';
 import bgimage from './bgimage.png';
 import jellyfish from './jellyfish.svg';
@@ -18,6 +19,7 @@ import sword_animated from './swordhover.png';
 import box from './boxclosed.png';
 import box_animated from './boxopen.png';
 import medussa from './medussa.png';
+import './events.css';
 // import seaweed from './seaweed.svg';
 import trans from '../../assets/1024px-HD_transparent_picture.png';
 import Scroll from '../scroll/scroll';
@@ -232,7 +234,7 @@ function Events() {
         scrollHead={scrollHead}
         eventsList={eventsList}
       />
-      <Box position='relative'>
+      <Box position='relative' className='eventFont'>
         <Image
           src={bgimage}
           alt='Background Image'
@@ -260,12 +262,15 @@ function Events() {
         <Flex direction='column'>
           <Box position='absolute' top='5%' right='35%'>
             <div
+              className='titleFont'
               style={{
                 color: 'white',
                 fontSize: 96,
-                fontFamily: '"Dalek", cursive',
-                fontWeight: '400',
+                fontWeight: '200',
                 wordWrap: 'break-word',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
               }}
             >
               E V E N T S
@@ -295,7 +300,7 @@ function Events() {
             <Text
               fontSize='22'
               fontWeight='400'
-              fontFamily='"Dalek", cursive'
+              fontFamily='"Inknut Antiqua", cursive'
               wordBreak='break-word'
               color='white'
             >
@@ -322,7 +327,7 @@ function Events() {
             <Text
               fontSize='22'
               fontWeight='400'
-              fontFamily='"Dalek", cursive'
+              fontFamily='"Inknut Antiqua", cursive'
               wordBreak='break-word'
               color='white'
             >
@@ -371,7 +376,7 @@ function Events() {
             <Text
               fontSize='22'
               fontWeight='400'
-              fontFamily='"Dalek", cursive'
+              fontFamily='"Inknut Antiqua", cursive'
               wordBreak='break-word'
               color='white'
             >
@@ -420,7 +425,7 @@ function Events() {
             <Text
               fontSize='22'
               fontWeight='400'
-              fontFamily='"Dalek", cursive'
+              fontFamily='"Inknut Antiqua", cursive'
               wordBreak='break-word'
               color='white'
             >
@@ -473,7 +478,7 @@ function Events() {
             <Text
               fontSize='22'
               fontWeight='400'
-              fontFamily='"Dalek", cursive'
+              fontFamily='"Inknut Antiqua", cursive'
               wordBreak='break-word'
               color='white'
             >

@@ -12,6 +12,7 @@ import {
 import { AnimatePresence } from 'framer-motion';
 import RotateButton from '../Components/RotateButton';
 import ModalDesktop from '../Components/ModalDesktop';
+import MobileBurger from '../Components/MobileBurger';
 import waves_logo from '../assets/Waves-logo.png';
 import waves_background from '../assets/waves_background.jpg';
 import main_page_bg_phone from '../assets/main_page_bg_phone.png';
@@ -72,7 +73,12 @@ export default function HomePage() {
           </Box>
         </Flex>
         <AnimatePresence>
-          {modalOpen && <ModalDesktop handleClick={handleClick} />}
+          {modalOpen && !isSmallerThan600 && (
+            <ModalDesktop handleClick={handleClick} />
+          )}
+          {modalOpen && isSmallerThan600 && (
+            <MobileBurger handleClick={handleClick} />
+          )}
         </AnimatePresence>
       </Box>
     </ChakraProvider>

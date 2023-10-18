@@ -9,7 +9,6 @@ import kaalabg from '../assets/kaalabg.png';
 export default function StartPage() {
   const [bgChange, setBgChange] = useState(false);
   setTimeout(() => {
-    console.log('sup bitch');
     setBgChange(true);
   }, 1000);
   const [isSmallerThan600] = useMediaQuery('(max-width: 600px)');
@@ -29,9 +28,7 @@ export default function StartPage() {
         src={gif}
         alt='Animated Waves'
         style={{
-          maxWidth: '100%',
-          maxHeight: '100%',
-          width: 'auto',
+          width: '100%',
           height: 'auto',
         }}
       />

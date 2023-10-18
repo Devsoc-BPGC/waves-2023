@@ -17,6 +17,7 @@ import waves_background from '../assets/waves_background.jpg';
 import main_page_bg_phone from '../assets/main_page_bg_phone.png';
 import Register from '../Components/Register';
 import trans from '../assets/1024px-HD_transparent_picture.png';
+import bg_1 from '../assets/bg_1.png';
 
 export default function HomePage() {
   const [isSmallerThan600] = useMediaQuery('(max-width: 600px)');
@@ -32,7 +33,7 @@ export default function HomePage() {
           fontSize='xl'
           bgSize='cover'
           bgRepeat='no-repeat'
-          bgImg={isSmallerThan600 ? main_page_bg_phone : waves_background}
+          bgImg={isSmallerThan600 ? main_page_bg_phone : bg_1}
           minH='100vh'
           justify='space-between'
           flexDir='column'

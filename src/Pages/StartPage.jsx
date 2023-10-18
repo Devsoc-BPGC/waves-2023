@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Flex } from '@chakra-ui/react';
+import { Flex, useMediaQuery } from '@chakra-ui/react';
 import gif from '../assets/WavesAnimGIF_DevSoc.gif';
 import HomePage from './HomePage';
 import highBg from '../assets/highBg.png';
+import highBgPhone from '../assets/highBgPhone.png';
 import kaalabg from '../assets/kaalabg.png';
 
 export default function StartPage() {
@@ -11,6 +12,8 @@ export default function StartPage() {
     console.log('sup bitch');
     setBgChange(true);
   }, 1000);
+  const [isSmallerThan600] = useMediaQuery('(max-width: 600px)');
+  const moddedImg = isSmallerThan600 ? highBgPhone : highBg;
   return (
     <Flex
       width='100vw'
@@ -19,7 +22,7 @@ export default function StartPage() {
       justifyContent='center'
       overflow='hidden'
       transitionDuration='6900ms'
-      backgroundImage={bgChange ? highBg : kaalabg}
+      backgroundImage={bgChange ? moddedImg : kaalabg}
       backgroundSize='cover'
     >
       <img

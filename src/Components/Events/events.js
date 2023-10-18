@@ -17,6 +17,7 @@ import swords from './sword.png';
 import sword_animated from './swordhover.png';
 import box from './boxclosed.png';
 import box_animated from './boxopen.png';
+import medussa from './medussa.png';
 // import seaweed from './seaweed.svg';
 import trans from '../../assets/1024px-HD_transparent_picture.png';
 import Scroll from '../scroll/scroll';
@@ -328,6 +329,23 @@ function Events() {
               {' '}
               EXTRAS{' '}
             </Text>
+          </Box>
+        </Flex>
+        <Flex direction='column'>
+          <Box position='absolute' top='27%' left='47%'>
+            <Image
+              src={medussa}
+              alt='carpeDictum'
+              width='80px'
+              height='84px'
+              zIndex='1'
+              cursor='pointer'
+              onClick={() => {
+                setScrollHead('Carpe Dictum');
+                setEventsList(carpeDictumEvents);
+                setShowScroll(!showScroll);
+              }}
+            />
           </Box>
         </Flex>
         <Flex>

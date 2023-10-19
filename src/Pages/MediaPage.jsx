@@ -11,7 +11,7 @@ import {
 import bubble1 from '../assets/image 4.png';
 import evilmask from '../assets/maskcropped.png';
 import horsebadge from '../assets/horsdebadge.png';
-import underwater from '../assets/underwatersponsors.png';
+import underwater from '../assets/bg_media_spons.gif';
 
 export default function MediaPage() {
   const [isSmallerThan600] = useMediaQuery('(max-width: 600px)');

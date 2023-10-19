@@ -27,7 +27,7 @@ import bubble1 from '../assets/image 4.png';
 import evilmask from '../assets/maskcropped.png';
 import horsebadge from '../assets/horsdebadge.png';
 import underwater from '../assets/underwatersponsors.png';
-import mediabg from '../assets/mediabg.png';
+import mediabg from '../assets/bg_media_spons.gif';
 
 import spskin from '../assets/spons/skinstory.webp';
 import spvast from '../assets/spons/vastradi.png';

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChakraProvider, Flex } from '@chakra-ui/react';
+import { ChakraProvider, Flex, useMediaQuery } from '@chakra-ui/react';
 import { motion, AnimatePresence } from 'framer-motion';
 import scrollimg from './scroll.png';
 import scrollLeft from './scrollLeft.png';
@@ -11,6 +11,7 @@ import './scroll.css';
 
 const Scroll = props => {
   const [index, setIndex] = useState(0);
+  const [isSmallerThan530] = useMediaQuery('(max-width: 530px)');
   const clickHandler = () => {
     props.setShowScroll(!props.showScroll);
     setIndex(0);
@@ -88,7 +89,7 @@ const Scroll = props => {
                 flexDir='column'
                 justify='start'
                 align='center'
-                width='60%'
+                width={isSmallerThan530 ? '85%' : '60%'}
                 height='70%'
               >
                 <Flex width='100%' height='20%'>
@@ -141,7 +142,11 @@ const Scroll = props => {
                     })}
                   </Flex>
                   <Flex height='100%' width='65%' flexDir='column'>
-                    <Flex fontSize='2.5rem' height='20%' width='100%'>
+                    <Flex
+                      fontSize={isSmallerThan530 ? '2.25rem' : '2.5rem'}
+                      height='20%'
+                      width='100%'
+                    >
                       {props.eventsList[index].name}
                     </Flex>
                     <Flex

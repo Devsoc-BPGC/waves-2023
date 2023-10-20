@@ -27,7 +27,7 @@ import bubble1 from '../assets/image 4.png';
 import evilmask from '../assets/maskcropped.png';
 import horsebadge from '../assets/horsdebadge.png';
 import underwater from '../assets/underwatersponsors.png';
-import mediabg from '../assets/mediabg.png';
+import mediabg from '../assets/bg_media_spons.gif';
 
 import spskin from '../assets/spons/skinstory.webp';
 import spvast from '../assets/spons/vastradi.png';
@@ -198,12 +198,13 @@ const SponsorCards2 = MediaSponsors.map(el => (
     mb='2rem'
     justifyContent={'space-around'}
   >
-    <Image src={el.image} borderRadius='lg' />
+    <Image maxH='20rem' objectFit='contain' src={el.image} borderRadius='lg' />
     <Text
       color='#FFF'
       fontSize='2.2rem'
       lineHeight={'2rem'}
       mb='0.5rem'
+      mt='0.5rem'
       style={{
         fontFamily: 'Junge',
         fontWeight: '400',
@@ -247,13 +248,13 @@ export default function HomePage() {
         bgSize='cover'
       >
         <Text
-          mt='2rem'
+          mt='3rem'
           mb='2rem'
+          textAlign='center'
           bgGradient='linear(to-b, #FFC700, #00FFF0, #FFC700)'
           bgClip='text'
-          textAlign='center'
           fontWeight={'bold'}
-          lineHeight='4rem'
+          lineHeight='6rem'
           style={{
             fontSize: isSmallerThan600 ? '3.85rem' : 96,
             fontFamily: 'Junge',

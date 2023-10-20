@@ -8,18 +8,35 @@ export default function Carousel() {
   const containerRef = useRef(null);
   const [isMouseOverCarousel, setIsMouseOverCarousel] = useState(false);
   const [isSmallerThan600] = useMediaQuery('(max-width: 600px)');
+  const [centralImageIndex, setCentralImageIndex] = useState(1);
 
   useEffect(() => {
     const container = containerRef.current;
 
     const handleScroll = event => {
+      if (isMouseOverCarousel) {
+        const containerWidth = container.clientWidth;
+        const scrollLeft = container.scrollLeft;
+        console.log(scrollLeft);
+        // const percentageWidthScrolled = (scrollLeft / window.innerWidth) * 100;
+
+        // console.log(percentageWidthScrolled);
+        const imageWidth = containerWidth * (isSmallerThan600 ? 0.63 : 0.38);
+        console.log(imageWidth);
+
+        const newCentralImageIndex = Math.ceil(scrollLeft / imageWidth);
+        setCentralImageIndex(newCentralImageIndex);
+        console.log(centralImageIndex);
+      }
       if (isMouseOverCarousel && event.deltaMode === 0) {
         const scrollAmount = event.deltaY;
         const maxScrollLeft = container.scrollWidth - container.clientWidth;
         let scrollDistance;
 
-        console.log(container.clientWidth);
-        console.log(container.scrollLeft);
+        // console.log(container.clientWidth);
+        // console.log(container.scrollLeft);
+        // console.log(1 / (container.clientWidth / container.scrollLeft));
+
         if (container.clientWidth >= 768) {
           scrollDistance = (container.clientWidth * 3874) / 768;
         } else {
@@ -65,7 +82,7 @@ export default function Carousel() {
       container.removeEventListener('mouseenter', handleMouseEnter);
       container.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, [isMouseOverCarousel]);
+  }, [isMouseOverCarousel, isSmallerThan600, centralImageIndex]);
 
   return (
     <ChakraProvider>
@@ -116,17 +133,32 @@ export default function Carousel() {
                 key={index}
                 src={image.src}
                 flex='1'
-                // aspectRatio={3 / 2}
-                w={['60%', '60%', '35%']}
+                w={[
+                  '60%',
+                  '60%',
+                  `${index === centralImageIndex ? '45%' : '35%'}`,
+                ]}
+                h={index === centralImageIndex ? 'auto' : '100%'}
+                style={{
+                  paddingTop: index !== centralImageIndex ? '3.16%' : 0,
+                }}
               />
             ))}
+
             {images.map((image, index) => (
               <Image
-                key={index + 4}
+                key={index + 16}
                 src={image.src}
-                // aspectRatio={3 / 2}
-                w={['60%', '60%', '35%']}
                 flex='1'
+                w={[
+                  '60%',
+                  '60%',
+                  `${index + 16 === centralImageIndex ? '45%' : '35%'}`,
+                ]}
+                h={index + 16 === centralImageIndex ? 'auto' : '100%'}
+                style={{
+                  paddingTop: index + 16 !== centralImageIndex ? '3.16%' : 0,
+                }}
               />
             ))}
           </div>

@@ -27,7 +27,7 @@ import bubble1 from '../assets/image 4.png';
 import evilmask from '../assets/maskcropped.png';
 import horsebadge from '../assets/horsdebadge.png';
 import underwater from '../assets/underwatersponsors.png';
-import mediabg from '../assets/mediabg.png';
+import mediabg from '../assets/bg_media_spons.gif';
 
 import spface from '../assets/Associate Magazine Partner + Magazine Partner of Fashion Parade.jpg';
 import spedtimes from '../assets/Backlinks/Associate Media Partner_.jpg';
@@ -225,10 +225,10 @@ const MediaSponsors = [
 const SponsorCards2 = MediaSponsors.map(el => (
   <Flex
     minW='20rem'
-    width='35%'
+    width='28%'
     direction={'column'}
     borderRadius={'1rem'}
-    p='2rem 6rem'
+    p='2rem 4rem'
     backdropFilter='auto'
     backdropSaturate='3'
     backdropContrast='50%'
@@ -240,27 +240,31 @@ const SponsorCards2 = MediaSponsors.map(el => (
     mb='2rem'
     justifyContent={'space-around'}
   >
-    <Image maxH='20rem' objectFit='contain' src={el.image} borderRadius='lg' />
-    <Text
-      color='#FFF'
-      fontSize='2.2rem'
-      lineHeight={'2rem'}
-      mt='1rem'
-      mb='0.5rem'
-      style={{
-        fontFamily: 'Junge',
-        fontWeight: '400',
-        wordWrap: 'break-word',
-      }}
-    >
-      {el.name}
-    </Text>
+    <Flex height='12.5rem' direction='column' justify='space-around'>
+      <Image maxH='8rem' objectFit='contain' src={el.image} borderRadius='lg' />
+      <Text
+        color='#FFF'
+        fontSize='1.7rem'
+        lineHeight={'2rem'}
+        mt='1rem'
+        mb='0.5rem'
+        textAlign='center'
+        style={{
+          fontFamily: 'Junge',
+          fontWeight: '400',
+          wordWrap: 'break-word',
+        }}
+      >
+        {el.name}
+      </Text>
+    </Flex>
     <Divider />
     <Text
       color='#FFD600'
-      fontSize='1.7rem'
+      fontSize='1rem'
       lineHeight={'1.5rem'}
       mt='0.5rem'
+      textAlign='center'
       style={{
         fontFamily: 'Junge',
         fontWeight: '400',

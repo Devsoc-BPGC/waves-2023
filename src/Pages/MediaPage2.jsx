@@ -240,11 +240,12 @@ const SponsorCards2 = MediaSponsors.map(el => (
     mb='2rem'
     justifyContent={'space-around'}
   >
-    <Image src={el.image} borderRadius='lg' />
+    <Image maxH='20rem' objectFit='contain' src={el.image} borderRadius='lg' />
     <Text
       color='#FFF'
       fontSize='2.2rem'
       lineHeight={'2rem'}
+      mt='1rem'
       mb='0.5rem'
       style={{
         fontFamily: 'Junge',

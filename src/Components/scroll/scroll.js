@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
-import {
-  ChakraProvider,
-  Box,
-  Flex,
-  Spacer,
-  Image,
-  useMediaQuery,
-} from '@chakra-ui/react';
+import { ChakraProvider, Flex, useMediaQuery } from '@chakra-ui/react';
 import { motion, AnimatePresence } from 'framer-motion';
 import scrollimg from './scroll.png';
 import scrollLeft from './scrollLeft.png';
@@ -18,6 +11,7 @@ import './scroll.css';
 
 const Scroll = props => {
   const [index, setIndex] = useState(0);
+  const [isSmallerThan600] = useMediaQuery('(max-width: 600px)');
   const clickHandler = () => {
     props.setShowScroll(!props.showScroll);
     setIndex(0);
@@ -95,7 +89,7 @@ const Scroll = props => {
                 flexDir='column'
                 justify='start'
                 align='center'
-                width='60%'
+                width={isSmallerThan600 ? '85%' : '60%'}
                 height='70%'
               >
                 <Flex width='100%' height='20%'>
@@ -105,6 +99,7 @@ const Scroll = props => {
                       justifyContent: 'space-evenly',
                       alignItems: 'center',
                       flexDirection: 'column',
+                      fontSize: isSmallerThan600 ? '2.5rem' : '3rem',
                     }}
                   >
                     <h1>{props.scrollHead}</h1>
@@ -133,7 +128,7 @@ const Scroll = props => {
                         >
                           <Flex
                             width='100%'
-                            fontSize='2xl'
+                            fontSize={'2xl'}
                             px='5'
                             cursor='pointer'
                             onClick={() => {
@@ -148,7 +143,11 @@ const Scroll = props => {
                     })}
                   </Flex>
                   <Flex height='100%' width='65%' flexDir='column'>
-                    <Flex fontSize='2.5rem' height='20%' width='100%'>
+                    <Flex
+                      fontSize={isSmallerThan600 ? '2.rem' : '2.25rem'}
+                      height='20%'
+                      width='100%'
+                    >
                       {props.eventsList[index].name}
                     </Flex>
                     <Flex

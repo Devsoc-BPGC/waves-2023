@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;700&family=Junge&display=swap');
+
+.eventFont {
+  font-family: 'Inknut Antiqua', serif;
+}
+.titleFont {
+  font-family: 'Junge', cursive;
+}

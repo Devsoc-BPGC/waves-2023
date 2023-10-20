@@ -7,6 +7,7 @@ import {
   Image,
   Flex,
   Text,
+  Center,
 } from '@chakra-ui/react';
 import bgimage from './bgimage.png';
 import jellyfish from './jellyfish.svg';
@@ -17,9 +18,12 @@ import swords from './sword.png';
 import sword_animated from './swordhover.png';
 import box from './boxclosed.png';
 import box_animated from './boxopen.png';
+import medussa from './medussa.png';
+import './events.css';
 // import seaweed from './seaweed.svg';
 import trans from '../../assets/1024px-HD_transparent_picture.png';
 import Scroll from '../scroll/scroll';
+import Fonts from '../Fonts';
 
 function Events() {
   const [isHoveringSword, setIsHoveringSword] = useState(false);
@@ -223,13 +227,14 @@ function Events() {
   const [jellyfishStyle, setJellyfishStyle] = useState(zoomInOnHover);
   return (
     <ChakraProvider theme={theme}>
+      <Fonts />
       <Scroll
         showScroll={showScroll}
         setShowScroll={setShowScroll}
         scrollHead={scrollHead}
         eventsList={eventsList}
       />
-      <Box position='relative'>
+      <Box position='relative' className='eventFont'>
         <Image
           src={bgimage}
           alt='Background Image'
@@ -257,12 +262,15 @@ function Events() {
         <Flex direction='column'>
           <Box position='absolute' top='5%' right='35%'>
             <div
+              className='titleFont'
               style={{
                 color: 'white',
                 fontSize: 96,
-                fontFamily: 'Junge',
-                fontWeight: '400',
+                fontWeight: '200',
                 wordWrap: 'break-word',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
               }}
             >
               E V E N T S
@@ -292,7 +300,7 @@ function Events() {
             <Text
               fontSize='22'
               fontWeight='400'
-              fontFamily='Inknut Antiqua'
+              fontFamily='"Inknut Antiqua", cursive'
               wordBreak='break-word'
               color='white'
             >
@@ -319,13 +327,30 @@ function Events() {
             <Text
               fontSize='22'
               fontWeight='400'
-              fontFamily='Inknut Antiqua'
+              fontFamily='"Inknut Antiqua", cursive'
               wordBreak='break-word'
               color='white'
             >
               {' '}
               EXTRAS{' '}
             </Text>
+          </Box>
+        </Flex>
+        <Flex direction='column'>
+          <Box position='absolute' top='27%' left='47%'>
+            <Image
+              src={medussa}
+              alt='carpeDictum'
+              width='80px'
+              height='84px'
+              zIndex='1'
+              cursor='pointer'
+              onClick={() => {
+                setScrollHead('Carpe Dictum');
+                setEventsList(carpeDictumEvents);
+                setShowScroll(!showScroll);
+              }}
+            />
           </Box>
         </Flex>
         <Flex>
@@ -351,7 +376,7 @@ function Events() {
             <Text
               fontSize='22'
               fontWeight='400'
-              fontFamily='Inknut Antiqua'
+              fontFamily='"Inknut Antiqua", cursive'
               wordBreak='break-word'
               color='white'
             >
@@ -400,7 +425,7 @@ function Events() {
             <Text
               fontSize='22'
               fontWeight='400'
-              fontFamily='Inknut Antiqua'
+              fontFamily='"Inknut Antiqua", cursive'
               wordBreak='break-word'
               color='white'
             >
@@ -453,7 +478,7 @@ function Events() {
             <Text
               fontSize='22'
               fontWeight='400'
-              fontFamily='Inknut Antiqua'
+              fontFamily='"Inknut Antiqua", cursive'
               wordBreak='break-word'
               color='white'
             >

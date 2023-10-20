@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ChakraProvider, Box, Image } from '@chakra-ui/react';
+import { ChakraProvider, Box, Image, useMediaQuery } from '@chakra-ui/react';
 import back_image from '../assets/back_image_page2.jpg';
 import images from './images';
 import './Carousel.css';
-import bg_3 from '../assets/bg_3.png';
 
 export default function Carousel() {
   const containerRef = useRef(null);
   const [isMouseOverCarousel, setIsMouseOverCarousel] = useState(false);
+  const [isSmallerThan600] = useMediaQuery('(max-width: 600px)');
 
   useEffect(() => {
     const container = containerRef.current;
@@ -72,7 +72,7 @@ export default function Carousel() {
       <Box
         textAlign='center'
         fontSize='xl'
-        backgroundImage={bg_3}
+        backgroundImage={`url(${back_image})`}
         backgroundSize='cover'
         h='100vh'
         display='flex'
@@ -82,6 +82,22 @@ export default function Carousel() {
         alignItems='center'
         overflow='hidden'
       >
+        <Box position='relative' top='5%' right='0%'>
+          <div
+            className='titleFont'
+            style={{
+              color: 'white',
+              fontSize: isSmallerThan600 ? '2.5rem' : 96,
+              fontWeight: '200',
+              wordWrap: 'break-word',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            G A L L E R Y
+          </div>
+        </Box>
         <div className='carousel-container'>
           <div
             ref={containerRef}

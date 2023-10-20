@@ -12,12 +12,12 @@ import {
 import { AnimatePresence } from 'framer-motion';
 import RotateButton from '../Components/RotateButton';
 import ModalDesktop from '../Components/ModalDesktop';
+import MobileBurger from '../Components/MobileBurger';
 import waves_logo from '../assets/Waves-logo.png';
 import waves_background from '../assets/waves_background.jpg';
 import main_page_bg_phone from '../assets/main_page_bg_phone.png';
 import Register from '../Components/Register';
 import trans from '../assets/1024px-HD_transparent_picture.png';
-import bg_1 from '../assets/bg_1.png';
 
 export default function HomePage() {
   const [isSmallerThan600] = useMediaQuery('(max-width: 600px)');
@@ -33,7 +33,7 @@ export default function HomePage() {
           fontSize='xl'
           bgSize='cover'
           bgRepeat='no-repeat'
-          bgImg={isSmallerThan600 ? main_page_bg_phone : bg_1}
+          bgImg={isSmallerThan600 ? main_page_bg_phone : waves_background}
           minH='100vh'
           justify='space-between'
           flexDir='column'
@@ -73,7 +73,12 @@ export default function HomePage() {
           </Box>
         </Flex>
         <AnimatePresence>
-          {modalOpen && <ModalDesktop handleClick={handleClick} />}
+          {modalOpen && !isSmallerThan600 && (
+            <ModalDesktop handleClick={handleClick} />
+          )}
+          {modalOpen && isSmallerThan600 && (
+            <MobileBurger handleClick={handleClick} />
+          )}
         </AnimatePresence>
       </Box>
     </ChakraProvider>

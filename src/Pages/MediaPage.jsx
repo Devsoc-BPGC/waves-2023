@@ -3,25 +3,19 @@ import {
   ChakraProvider,
   Box,
   theme,
-  Flex,
-  Spacer,
   Image,
   Grid,
   GridItem,
-  SimpleGrid,
   useMediaQuery,
 } from '@chakra-ui/react';
 import bubble1 from '../assets/image 4.png';
 import evilmask from '../assets/maskcropped.png';
 import horsebadge from '../assets/horsdebadge.png';
-import underwater from '../assets/underwatersponsors.png';
-import bg_2 from '../assets/bg_2.png';
+import underwater from '../assets/bg_media_spons.gif';
 
 export default function MediaPage() {
   const [isSmallerThan600] = useMediaQuery('(max-width: 600px)');
   const [modalOpen, setModalOpen] = useState(false);
-
-  const handleClick = () => setModalOpen(!modalOpen);
 
   return (
     <ChakraProvider theme={theme}>
@@ -29,7 +23,7 @@ export default function MediaPage() {
         overflow={'hidden'}
         position={'relative'}
         mt='0rem'
-        bgImage={bg_2}
+        bgImage={underwater}
         bgAttachment='fixed'
         bgRepeat='no-repeat'
         bgSize='cover'

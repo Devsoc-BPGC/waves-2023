@@ -45,8 +45,11 @@
   },
   "devDependencies": {
     "husky": "^8.0.1",
+    "i": "^0.3.7",
     "lint-staged": "^13.0.3",
-    "prettier": "2.7.1"
+    "npm": "^10.1.0",
+    "prettier": "2.7.1",
+    "react-router-dom": "^6.16.0"
   },
   "lint-staged": {
     "**/*.{html,css,js,jsx,json}": "prettier --write"

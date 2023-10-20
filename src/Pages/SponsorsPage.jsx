@@ -251,11 +251,11 @@ export default function HomePage() {
           mb='2rem'
           bgGradient='linear(to-b, #FFC700, #00FFF0, #FFC700)'
           bgClip='text'
-          fontSize='5rem'
+          textAlign='center'
           fontWeight={'bold'}
           lineHeight='4rem'
           style={{
-            fontSize: 96,
+            fontSize: isSmallerThan600 ? '3.85rem' : 96,
             fontFamily: 'Junge',
             fontWeight: '400',
             wordWrap: 'break-word',

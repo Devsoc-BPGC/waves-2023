@@ -7,7 +7,6 @@ import '../App.css';
 import Footer from '../Components/Footer';
 import StartPage from '../Pages/StartPage';
 import Carousel from './Carousel';
-import MediaPage2 from './MediaPage2';
 export default function MainPage() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -37,7 +36,6 @@ export default function MainPage() {
             <EventsMobile />
           </Show>
           <Carousel />
-          <MediaPage2 />
           <Footer />
         </Box>
       )}

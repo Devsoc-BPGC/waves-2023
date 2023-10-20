@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ChakraProvider, Box, Image } from '@chakra-ui/react';
+import { ChakraProvider, Box, Image, useMediaQuery } from '@chakra-ui/react';
 import back_image from '../assets/back_image_page2.jpg';
 import images from './images';
 import './Carousel.css';
@@ -7,6 +7,7 @@ import './Carousel.css';
 export default function Carousel() {
   const containerRef = useRef(null);
   const [isMouseOverCarousel, setIsMouseOverCarousel] = useState(false);
+  const [isSmallerThan600] = useMediaQuery('(max-width: 600px)');
 
   useEffect(() => {
     const container = containerRef.current;
@@ -86,7 +87,7 @@ export default function Carousel() {
             className='titleFont'
             style={{
               color: 'white',
-              fontSize: 96,
+              fontSize: isSmallerThan600 ? '2.5rem' : 96,
               fontWeight: '200',
               wordWrap: 'break-word',
               display: 'flex',

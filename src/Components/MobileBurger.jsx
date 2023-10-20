@@ -40,16 +40,18 @@ export default function MobileBurger(props) {
           flexDirection='column'
         >
           <Flex width='90%' justify='center'>
-            <img src={logo} alt='Logo' />
+            <a href='/'>
+              <img src={logo} alt='Logo' />
+            </a>
           </Flex>
           <Flex width='90%' justify='center' align='center'>
-            Our Team
+            <a href='/teams'>Our Team</a>
           </Flex>
           <Flex width='90%' justify='center' align='center'>
-            Media Partners
+            <a href='/media'>Media Partners</a>
           </Flex>
           <Flex width='90%' justify='center' align='center'>
-            Sponsors
+            <a href='/sponsors'>Sponsors</a>
           </Flex>
         </Flex>
       </motion.div>

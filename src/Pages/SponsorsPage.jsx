@@ -251,7 +251,7 @@ export default function HomePage() {
           mt='3rem'
           mb='2rem'
           textAlign='center'
-          bgGradient='linear(to-b, #FFC700, #00FFF0, #FFC700)'
+          bgGradient='linear(to-b, #FFC700,40%, #00FFF0,60% , #FFC700)'
           bgClip='text'
           fontWeight={'bold'}
           lineHeight='6rem'

@@ -99,7 +99,7 @@ const Scroll = props => {
                       justifyContent: 'space-evenly',
                       alignItems: 'center',
                       flexDirection: 'column',
-                      fontSize: isSmallerThan600 ? '2.5rem' : '3.5rem',
+                      fontSize: isSmallerThan600 ? '2.5rem' : '3rem',
                     }}
                   >
                     <h1>{props.scrollHead}</h1>
@@ -144,7 +144,7 @@ const Scroll = props => {
                   </Flex>
                   <Flex height='100%' width='65%' flexDir='column'>
                     <Flex
-                      fontSize={isSmallerThan600 ? '2.25rem' : '2.5rem'}
+                      fontSize={isSmallerThan600 ? '2.rem' : '2.25rem'}
                       height='20%'
                       width='100%'
                     >

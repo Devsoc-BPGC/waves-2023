@@ -6,17 +6,6 @@ import MediaPage2 from './Pages/MediaPage2';
 import Carousel from './Pages/Carousel';
 import SponsorsPage from './Pages/SponsorsPage';
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 6900);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-
   return (
     <Routes>
       <Route path='/' element={<MainPage />}></Route>

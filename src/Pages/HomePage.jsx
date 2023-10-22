@@ -14,7 +14,7 @@ import RotateButton from '../Components/RotateButton';
 import ModalDesktop from '../Components/ModalDesktop';
 import MobileBurger from '../Components/MobileBurger';
 import waves_logo from '../assets/Waves-logo.png';
-import waves_background from '../assets/waves_background.jpg';
+import waves_background from '../assets/man-with-trident-water.mp4';
 import main_page_bg_phone from '../assets/main_page_bg_phone.png';
 import Register from '../Components/Register';
 import trans from '../assets/1024px-HD_transparent_picture.png';
@@ -38,6 +38,25 @@ export default function HomePage() {
           justify='space-between'
           flexDir='column'
         >
+          {isSmallerThan600 ? (
+            <></>
+          ) : (
+            <video
+              loop
+              autoPlay
+              muted
+              style={{
+                zIndex: -1,
+                position: 'absolute',
+                top: '0px',
+                left: '0px',
+                objectFit: 'cover',
+                minHeight: '100vh',
+              }}
+            >
+              <source src={waves_background} type='video/mp4' />
+            </video>
+          )}
           <WaterWave
             imageUrl={trans}
             perturbance='0.03'

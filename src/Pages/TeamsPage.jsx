@@ -1,4 +1,10 @@
-import { ChakraProvider, Flex, theme, Text } from '@chakra-ui/react';
+import {
+  ChakraProvider,
+  Flex,
+  theme,
+  Text,
+  useMediaQuery,
+} from '@chakra-ui/react';
 import React from 'react';
 import teamsbg from '../assets/our_teams_bg.png';
 import { Grid, GridItem, Box } from '@chakra-ui/react';
@@ -6,6 +12,7 @@ import TeamMemberCard from '../Components/TeamMemberCard';
 import team_mem_1 from '../assets/team_member.png';
 import RotateButton from '../Components/RotateButton';
 export default function TeamsPage() {
+  const [isSmallerThan600] = useMediaQuery('(max-width: 600px)');
   return (
     <ChakraProvider theme={theme}>
       <Box bgSize='cover' bgRepeat='no-repeat' bgImg={teamsbg}>
@@ -45,7 +52,9 @@ export default function TeamsPage() {
             />
           </Grid>
           <Grid
-            templateColumns='repeat(2, 1fr)'
+            templateColumns={
+              isSmallerThan600 ? 'repeat(1, 1fr)' : 'repeat(2, 1fr)'
+            }
             w='100%'
             placeItems='center'
             justifyItems='center'

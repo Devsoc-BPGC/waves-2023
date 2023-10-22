@@ -223,7 +223,7 @@ const ModalDevSocMobile = props => {
               height: '200vh',
             }}
             onClick={e => {
-              handleClick(0);
+              handleClick(4);
               e.stopPropagation();
             }}
           >
@@ -233,7 +233,7 @@ const ModalDevSocMobile = props => {
               onMouseEnter={() => handleMouseEnter(1)}
               onMouseLeave={() => handleMouseLeave(1)}
               onClick={e => {
-                handleClick(1);
+                handleClick(3);
                 e.stopPropagation();
               }}
             >
@@ -256,7 +256,7 @@ const ModalDevSocMobile = props => {
                   onMouseEnter={() => handleMouseEnter(3)}
                   onMouseLeave={() => handleMouseLeave(3)}
                   onClick={e => {
-                    handleClick(3);
+                    handleClick(1);
                     e.stopPropagation();
                   }}
                 >
@@ -269,7 +269,7 @@ const ModalDevSocMobile = props => {
                     onMouseEnter={() => handleMouseEnter(4)}
                     onMouseLeave={() => handleMouseLeave(4)}
                     onClick={e => {
-                      handleClick(4);
+                      handleClick(0);
                       e.stopPropagation();
                     }}
                   ></motion.div>

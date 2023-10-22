@@ -2,6 +2,16 @@ import React, { useEffect, useRef, useState } from 'react';
 import { ChakraProvider, Box, Image, useMediaQuery } from '@chakra-ui/react';
 import back_image from '../assets/back_image_page2.jpg';
 import images from './images';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
 import './Carousel.css';
 
 export default function Carousel() {
@@ -10,79 +20,92 @@ export default function Carousel() {
   const [isSmallerThan600] = useMediaQuery('(max-width: 600px)');
   const [centralImageIndex, setCentralImageIndex] = useState(1);
 
-  useEffect(() => {
-    const container = containerRef.current;
+  // useEffect(() => {
+  //   const script = document.createElement('script');
 
-    const handleScroll = event => {
-      if (isMouseOverCarousel) {
-        const containerWidth = container.clientWidth;
-        const scrollLeft = container.scrollLeft;
-        console.log(scrollLeft);
-        // const percentageWidthScrolled = (scrollLeft / window.innerWidth) * 100;
+  //   script.src = "/magicscroll/magicscroll.js";
+  //   script.async = true;
 
-        // console.log(percentageWidthScrolled);
-        const imageWidth = containerWidth * (isSmallerThan600 ? 0.63 : 0.38);
-        console.log(imageWidth);
+  //   document.body.appendChild(script);
 
-        const newCentralImageIndex = Math.ceil(scrollLeft / imageWidth);
-        setCentralImageIndex(newCentralImageIndex);
-        console.log(centralImageIndex);
-      }
-      if (isMouseOverCarousel && event.deltaMode === 0) {
-        const scrollAmount = event.deltaY;
-        const maxScrollLeft = container.scrollWidth - container.clientWidth;
-        let scrollDistance;
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   }
+  // }, []);
 
-        // console.log(container.clientWidth);
-        // console.log(container.scrollLeft);
-        // console.log(1 / (container.clientWidth / container.scrollLeft));
+  // useEffect(() => {
+  //   const container = containerRef.current;
 
-        if (container.clientWidth >= 768) {
-          scrollDistance = (container.clientWidth * 3874) / 768;
-        } else {
-          scrollDistance = (container.clientWidth * 6940) / 767;
-        }
+  //   const handleScroll = event => {
+  //     if (isMouseOverCarousel) {
+  //       const containerWidth = container.clientWidth;
+  //       const scrollLeft = container.scrollLeft;
+  //       console.log(scrollLeft);
+  //       // const percentageWidthScrolled = (scrollLeft / window.innerWidth) * 100;
 
-        if (container.scrollLeft + scrollAmount >= maxScrollLeft) {
-          requestAnimationFrame(() => {
-            container.scrollLeft = scrollDistance;
-          });
-          event.preventDefault();
-        } else if (container.scrollLeft + scrollAmount <= 0) {
-          requestAnimationFrame(() => {
-            // container.scrollLeft = maxScrollLeft - scrollDistance;
-            if (container.clientWidth >= 768) {
-              container.scrollLeft = (container.clientWidth * 11914) / 1960;
-            } else {
-              container.scrollLeft = (container.clientWidth * 7725) / 767;
-            }
-          });
-          event.preventDefault();
-        } else {
-          container.scrollLeft += scrollAmount;
-          event.preventDefault();
-        }
-      }
-    };
+  //       // console.log(percentageWidthScrolled);
+  //       const imageWidth = containerWidth * (isSmallerThan600 ? 0.63 : 0.38);
+  //       console.log(imageWidth);
 
-    const handleMouseEnter = () => {
-      setIsMouseOverCarousel(true);
-    };
+  //       const newCentralImageIndex = Math.ceil(scrollLeft / imageWidth);
+  //       setCentralImageIndex(newCentralImageIndex);
+  //       console.log(centralImageIndex);
+  //     }
+  //     if (isMouseOverCarousel && event.deltaMode === 0) {
+  //       const scrollAmount = event.deltaY;
+  //       const maxScrollLeft = container.scrollWidth - container.clientWidth;
+  //       let scrollDistance;
 
-    const handleMouseLeave = () => {
-      setIsMouseOverCarousel(false);
-    };
+  //       // console.log(container.clientWidth);
+  //       // console.log(container.scrollLeft);
+  //       // console.log(1 / (container.clientWidth / container.scrollLeft));
 
-    container.addEventListener('wheel', handleScroll, { passive: false });
-    container.addEventListener('mouseenter', handleMouseEnter);
-    container.addEventListener('mouseleave', handleMouseLeave);
+  //       if (container.clientWidth >= 768) {
+  //         scrollDistance = (container.clientWidth * 3874) / 768;
+  //       } else {
+  //         scrollDistance = (container.clientWidth * 6940) / 767;
+  //       }
 
-    return () => {
-      container.removeEventListener('wheel', handleScroll);
-      container.removeEventListener('mouseenter', handleMouseEnter);
-      container.removeEventListener('mouseleave', handleMouseLeave);
-    };
-  }, [isMouseOverCarousel, isSmallerThan600, centralImageIndex]);
+  //       if (container.scrollLeft + scrollAmount >= maxScrollLeft) {
+  //         requestAnimationFrame(() => {
+  //           container.scrollLeft = scrollDistance;
+  //         });
+  //         event.preventDefault();
+  //       } else if (container.scrollLeft + scrollAmount <= 0) {
+  //         requestAnimationFrame(() => {
+  //           // container.scrollLeft = maxScrollLeft - scrollDistance;
+  //           if (container.clientWidth >= 768) {
+  //             container.scrollLeft = (container.clientWidth * 11914) / 1960;
+  //           } else {
+  //             container.scrollLeft = (container.clientWidth * 7725) / 767;
+  //           }
+  //         });
+  //         event.preventDefault();
+  //       } else {
+  //         container.scrollLeft += scrollAmount;
+  //         event.preventDefault();
+  //       }
+  //     }
+  //   };
+
+  //   const handleMouseEnter = () => {
+  //     setIsMouseOverCarousel(true);
+  //   };
+
+  //   const handleMouseLeave = () => {
+  //     setIsMouseOverCarousel(false);
+  //   };
+
+  //   container.addEventListener('wheel', handleScroll, { passive: false });
+  //   container.addEventListener('mouseenter', handleMouseEnter);
+  //   container.addEventListener('mouseleave', handleMouseLeave);
+
+  //   return () => {
+  //     container.removeEventListener('wheel', handleScroll);
+  //     container.removeEventListener('mouseenter', handleMouseEnter);
+  //     container.removeEventListener('mouseleave', handleMouseLeave);
+  //   };
+  // }, [isMouseOverCarousel, isSmallerThan600, centralImageIndex]);
 
   return (
     <ChakraProvider>
@@ -115,7 +138,7 @@ export default function Carousel() {
             G A L L E R Y
           </div>
         </Box>
-        <div className='carousel-container'>
+        {/* <div className='carousel-container'>
           <div
             ref={containerRef}
             style={{
@@ -162,6 +185,36 @@ export default function Carousel() {
               />
             ))}
           </div>
+        </div> */}
+        <div style={{ width: '100%' }}>
+          <Swiper
+            effect={'coverflow'}
+            grabCursor={true}
+            longSwipe={true}
+            shortSwipe={false}
+            pagination={true}
+            loop={true}
+            centeredSlides={true}
+            slidesPerView={'auto'}
+            navigation={true}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: false,
+            }}
+            modules={[EffectCoverflow, Pagination, Navigation]}
+            className='swiper'
+          >
+            {images.map(image => {
+              return (
+                <SwiperSlide className='swiper-slide'>
+                  <img src={image.src} />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
       </Box>
     </ChakraProvider>

@@ -125,6 +125,7 @@ export default function Carousel() {
               whiteSpace: 'nowrap',
               marginTop: '10%',
               gap: '3%',
+              transition: 'ease',
             }}
             className='carousel'
           >

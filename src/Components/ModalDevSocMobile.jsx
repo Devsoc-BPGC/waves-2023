@@ -222,6 +222,10 @@ const ModalDevSocMobile = props => {
               justifyContent: 'center',
               height: '200vh',
             }}
+            onClick={e => {
+              handleClick(0);
+              e.stopPropagation();
+            }}
           >
             <motion.div
               style={style('transparent')}

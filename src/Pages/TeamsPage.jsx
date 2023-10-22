@@ -344,7 +344,7 @@ export default function TeamsPage() {
         <Text
           height='5rem'
           fontFamily='Junge'
-          fontSize='64'
+          fontSize={isSmallerThan600 ? '1.5rem' : '64'}
           color='white'
           textAlign='center'
         >

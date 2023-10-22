@@ -1,3 +1,29 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+.slick-center img {
+  transform: scale(1.5, 1.5);
+}
+.slick-center img {
+  @media screen and (max-width: 768px) {
+    transform: scale(2, 2);
+  }
+}
+.slick-carousel {
+  width: 100%;
+
+  text-align: center;
+}
+.slick-slide {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.5%;
+}
+.slick-slide {
+  @media screen and (max-width: 768px) {
+    padding-top: 1%;
+  }
+}

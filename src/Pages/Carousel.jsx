@@ -17,7 +17,7 @@ export default function NewCarousel() {
     arrows: false,
     dots: false,
     centerMode: true,
-    centerPadding: '0%',
+    centerPadding: '10%',
     mobileFirst: true,
     swipe: true,
     swipeToSlide: true,
@@ -28,7 +28,7 @@ export default function NewCarousel() {
         breakpoint: 768,
         settings: {
           slidesToShow: 3,
-          // slidesToScroll: 1,
+          slidesToScroll: 1,
           centerMode: true,
           centerPadding: '0%',
           dots: false,
@@ -73,8 +73,7 @@ export default function NewCarousel() {
             width: '100%',
             overflowX: 'auto',
             position: 'relative',
-            top: '20%',
-            minHeight: '50vh',
+            top: isSmallerThan600 ? '25%' : '12%',
           }}
         >
           <Slider {...settings}>

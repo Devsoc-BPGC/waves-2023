@@ -4,19 +4,25 @@
 
 .slick-center img {
   transform: scale(1.5, 1.5);
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 .slick-center img {
   @media screen and (max-width: 768px) {
     transform: scale(2, 2);
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
   }
 }
 .slick-carousel {
   width: 100%;
-
-  text-align: center;
 }
 .slick-slide {
-  min-height: 50vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;

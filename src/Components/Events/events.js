@@ -10,6 +10,7 @@ import {
   Center,
 } from '@chakra-ui/react';
 import bgimage from './bgimage.png';
+import bgVid from './eventsVid.mp4';
 import jellyfish from './jellyfish.svg';
 import horsewheel from './horsewheel.svg';
 import spartanhelmet from './spartanhelmet.svg';
@@ -235,20 +236,24 @@ function Events() {
         eventsList={eventsList}
       />
       <Box position='relative' className='eventFont'>
-        <Image
-          src={bgimage}
-          alt='Background Image'
-          width='100vw'
-          height='105vh'
-          backgroundSize='cover'
-        />
+        <video
+          loop
+          autoPlay
+          muted
+          style={{
+            objectFit: 'cover',
+            minHeight: '100vh',
+          }}
+        >
+          <source src={bgVid} type='video/mp4' />
+        </video>
         <WaterWave
           imageUrl={trans}
           perturbance='0.03'
           dropRadius='25'
           resolution='576'
           style={{
-            height: '105vh',
+            height: '100vh',
             width: '100vw',
             backgroundSize: 'cover',
             position: 'absolute',
@@ -354,7 +359,7 @@ function Events() {
           </Box>
         </Flex>
         <Flex>
-          <Box position='absolute' bottom='2%' right='5%'>
+          <Box position='absolute' bottom='4%' right='5%'>
             <Image
               src={isHoveringHelmet ? helmet_animated : spartanhelmet}
               alt='Spartan'
@@ -380,7 +385,6 @@ function Events() {
               wordBreak='break-word'
               color='white'
             >
-              {' '}
               FILM & PHOTOGRAPHY{' '}
             </Text>
           </Box>
@@ -435,7 +439,7 @@ function Events() {
           </Box>
         </Flex>
         <Flex>
-          <Box position='absolute' bottom='0%' left='27%'>
+          <Box position='absolute' bottom='1%' left='27%'>
             <Image
               src={box}
               alt='Box'

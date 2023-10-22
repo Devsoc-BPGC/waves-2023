@@ -21,7 +21,6 @@ import RotateButton from '../Components/RotateButton';
 import ModalDesktop from '../Components/ModalDesktop';
 import waves_logo from '../assets/Waves-logo.png';
 import waves_background from '../assets/waves_background.jpg';
-import main_page_bg_phone from '../assets/main_page_bg_phone.png';
 import Register from '../Components/Register';
 import bubble1 from '../assets/image 4.png';
 import evilmask from '../assets/maskcropped.png';

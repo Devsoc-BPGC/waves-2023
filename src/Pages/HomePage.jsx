@@ -5,7 +5,6 @@ import {
   Box,
   theme,
   Flex,
-  Spacer,
   Image,
   useMediaQuery,
 } from '@chakra-ui/react';
@@ -15,7 +14,6 @@ import ModalDesktop from '../Components/ModalDesktop';
 import MobileBurger from '../Components/MobileBurger';
 import waves_logo from '../assets/Waves-logo.png';
 import waves_background from '../assets/manwithTrident.mp4';
-import main_page_bg_phone from '../assets/main_page_bg_phone.png';
 import Register from '../Components/Register';
 import trans from '../assets/1024px-HD_transparent_picture.png';
 
@@ -33,30 +31,27 @@ export default function HomePage() {
           fontSize='xl'
           bgSize='cover'
           bgRepeat='no-repeat'
-          bgImg={isSmallerThan600 ? main_page_bg_phone : waves_background}
           minH='100vh'
-          justify='space-between'
+          width='100%'
+          justify='space-around'
+          alignItems='center'
           flexDir='column'
         >
-          {isSmallerThan600 ? (
-            <></>
-          ) : (
-            <video
-              loop
-              autoPlay
-              muted
-              style={{
-                zIndex: -1,
-                position: 'absolute',
-                top: '0px',
-                left: '0px',
-                objectFit: 'cover',
-                minHeight: '100vh',
-              }}
-            >
-              <source src={waves_background} type='video/mp4' />
-            </video>
-          )}
+          <video
+            loop
+            autoPlay
+            muted
+            style={{
+              zIndex: -1,
+              position: 'absolute',
+              top: '0px',
+              left: '0px',
+              objectFit: 'cover',
+              minHeight: '100vh',
+            }}
+          >
+            <source src={waves_background} type='video/mp4' />
+          </video>
           <WaterWave
             imageUrl={trans}
             perturbance='0.03'
@@ -74,22 +69,19 @@ export default function HomePage() {
           >
             {methods => <></>}
           </WaterWave>
-          <Flex flexDir='row' m='10px'>
-            <Spacer></Spacer>
+          <Flex position='absolute' top='10px' right='10px'>
             <RotateButton onClick={handleClick} />
           </Flex>
-          <Spacer></Spacer>
-          <Image
-            m='auto'
-            src={waves_logo}
-            maxW='60%'
-            w='40%'
-            objectFit='cover'
-            marginBottom={'3rem'}
-          />
-          <Box boxSize='10vh' w='100%'>
+          <Flex position='absolute' width='100%' top='50%' justify='center'>
+            <Image
+              src={waves_logo}
+              position='absolute'
+              width={isSmallerThan600 ? '80%' : '40%'}
+            />
+          </Flex>
+          <Flex position='absolute' bottom='10%'>
             <Register />
-          </Box>
+          </Flex>
         </Flex>
         <AnimatePresence>
           {modalOpen && !isSmallerThan600 && (

@@ -22,11 +22,10 @@
   width: 100%;
 }
 .slick-slide {
-  min-height: 60vh;
-  display: flex;
+  min-height: 90vh;
   align-items: center;
   justify-content: center;
-  padding-top: 0.5%;
+  padding-top: 1%;
 }
 .slick-slide {
   @media screen and (max-width: 768px) {

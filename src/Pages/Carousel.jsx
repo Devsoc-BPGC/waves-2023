@@ -74,6 +74,7 @@ export default function NewCarousel() {
             overflowX: 'auto',
             position: 'relative',
             top: isSmallerThan600 ? '25%' : '12%',
+            minHeight: '60vh',
           }}
         >
           <Slider {...settings}>

@@ -1,17 +1,16 @@
 ::-webkit-scrollbar {
   display: none;
 }
-
-.slick-center img {
-  transform: scale(1.5, 1.5);
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-}
 .slick-center img {
   @media screen and (max-width: 768px) {
     transform: scale(2, 2);
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  @media screen and (min-width: 769px) {
+    transform: scale(1.5, 1.5);
     width: auto;
     height: auto;
     max-width: 100%;
@@ -22,13 +21,16 @@
   width: 100%;
 }
 .slick-slide {
-  min-height: 90vh;
-  align-items: center;
-  justify-content: center;
-  padding-top: 1%;
-}
-.slick-slide {
+  @media screen and (min-width: 769px) {
+    min-height: 80vh;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1%;
+  }
   @media screen and (max-width: 768px) {
+    min-height: 80vh;
+    align-items: center;
+    justify-content: center;
     padding-top: 1%;
   }
 }

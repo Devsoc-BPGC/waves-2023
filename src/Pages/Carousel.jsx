@@ -23,6 +23,7 @@ export default function NewCarousel() {
     swipeToSlide: true,
     touchMove: true,
     useTransform: true,
+    // variableWidth: true,
     responsive: [
       {
         breakpoint: 768,

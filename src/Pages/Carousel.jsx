@@ -11,13 +11,13 @@ export default function NewCarousel() {
   const [isSmallerThan600] = useMediaQuery('(max-width: 600px)');
   const settings = {
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 1,
     // slidesToScroll: 1,
     autoplay: false,
     arrows: false,
     dots: false,
     centerMode: true,
-    centerPadding: '10%',
+    centerPadding: '32%',
     mobileFirst: true,
     swipe: true,
     swipeToSlide: true,
@@ -28,10 +28,10 @@ export default function NewCarousel() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: true,
-          centerPadding: '0%',
+          centerPadding: '25%',
           dots: false,
           mobileFirst: true,
           swipe: true,

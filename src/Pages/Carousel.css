@@ -3,7 +3,7 @@
 }
 .slick-center img {
   @media screen and (max-width: 768px) {
-    transform: scale(1.4, 1.4);
+    transform: scale(1.35, 1.35);
     width: auto;
     height: auto;
     max-width: 100%;
@@ -34,16 +34,33 @@
 }
 
 .slick-slide {
+  outline: none;
   @media screen and (min-width: 769px) {
     min-height: 80vh;
     align-items: center;
     justify-content: center;
-    padding-top: 1%;
+    padding-top: 8vh;
   }
   @media screen and (max-width: 768px) {
-    min-height: 80vh;
+    min-height: 40vh;
     align-items: center;
     justify-content: center;
     padding-top: 1%;
+  }
+}
+.slick-slide > div {
+  @media screen and (max-width: 768px) {
+    margin: 0 5.5vw;
+  }
+  @media screen and (min-width: 769px) {
+    margin: 0 2.5vw;
+  }
+}
+.slick-list {
+  @media screen and (max-width: 768px) {
+    margin: 0 -5.5vw;
+  }
+  @media screen and (min-width: 769px) {
+    margin: 0 -2.5vw;
   }
 }

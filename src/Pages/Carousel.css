@@ -1,15 +1,24 @@
-/* Hide scrollbar */
 ::-webkit-scrollbar {
   display: none;
 }
 
-/* Common styles for all screen sizes */
 .slick-center img {
-  transform: scale(1.25, 1.25);
   width: auto;
   height: auto;
   max-width: 100%;
   max-height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .slick-center img {
+    transform: scale(1.4, 1.4);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .slick-center img {
+    transform: scale(1.25, 1.25);
+  }
 }
 
 .slick-carousel {
@@ -23,12 +32,10 @@
   justify-content: center;
   padding-top: 8vh;
 
-  /* Media queries for different screen sizes */
   @media screen and (max-width: 768px) {
     padding-top: 1%;
   }
 
-  /* Margin for child div elements */
   > div {
     margin: 0 2.5vw;
 

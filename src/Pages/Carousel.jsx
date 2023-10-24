@@ -11,13 +11,13 @@ export default function NewCarousel() {
   const [isSmallerThan600] = useMediaQuery('(max-width: 600px)');
   const settings = {
     infinite: true,
-    slidesToShow: 1,
+    slidesToShow: 3,
     // slidesToScroll: 1,
     autoplay: false,
     arrows: false,
     dots: false,
     centerMode: true,
-    centerPadding: '32%',
+    centerPadding: '0%',
     mobileFirst: true,
     swipe: true,
     swipeToSlide: true,
@@ -75,7 +75,6 @@ export default function NewCarousel() {
             overflowX: 'auto',
             position: 'relative',
             top: isSmallerThan600 ? '25%' : '12%',
-            minHeight: '60vh',
           }}
         >
           <Slider {...settings}>

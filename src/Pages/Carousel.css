@@ -11,7 +11,10 @@
 
 @media screen and (max-width: 767px) {
   .slick-center img {
-    transform: scale(1.4, 1.4);
+    transform: scale(1.45, 1.45);
+  }
+  .carousel-image {
+    transform: scale(1.3, 1.3);
   }
 }
 
@@ -40,7 +43,7 @@
     margin: 0 2.5vw;
 
     @media screen and (max-width: 768px) {
-      margin: 0 5.5vw;
+      margin: 0 10vw;
     }
   }
 }
@@ -49,6 +52,6 @@
   margin: 0 -2.5vw;
 
   @media screen and (max-width: 768px) {
-    margin: 0 -5.5vw;
+    margin: 0 -10vw;
   }
 }

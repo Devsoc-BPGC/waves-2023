@@ -31,7 +31,7 @@ export default function NewCarousel() {
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: true,
-          centerPadding: '25%',
+          centerPadding: '22.5%',
           dots: false,
           mobileFirst: true,
           swipe: true,
@@ -74,13 +74,17 @@ export default function NewCarousel() {
             width: '100%',
             overflowX: 'auto',
             position: 'relative',
-            top: isSmallerThan600 ? '25%' : '12%',
+            top: isSmallerThan600 ? '22%' : '12%',
           }}
         >
           <Slider {...settings}>
             {images.map(image => (
               <div key={image.id} className='image-container'>
-                <img src={image.src} alt={`Image ${image.id}`} />
+                <img
+                  className='carousel-image'
+                  src={image.src}
+                  alt={`Image ${image.id}`}
+                />
               </div>
             ))}
           </Slider>

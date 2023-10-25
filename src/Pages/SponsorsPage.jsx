@@ -91,7 +91,7 @@ const MediaSponsors = [
     key: 7,
     image: sptooyumm,
     name: 'Too Yumm',
-    title: 'Smacking Partner',
+    title: 'Snacking Partner',
   },
   {
     key: 8,

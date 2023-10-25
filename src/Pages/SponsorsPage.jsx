@@ -33,7 +33,7 @@ import spvast from '../assets/spons/vastradi.png';
 import sppeta from '../assets/spons/petaindia.svg';
 import spreasemt from '../assets/spons/easemytrip.png';
 import spknots from '../assets/spons/knotsbyamp.png';
-import spsamaro from '../assets/spons/samaro.webp';
+import spsamaro from '../assets/spons/samaro.jpeg';
 import sptooyumm from '../assets/spons/tooyumm.png';
 import spkiaya from '../assets/spons/kiaya.webp';
 import spsbi from '../assets/spons/sbi.jpg';

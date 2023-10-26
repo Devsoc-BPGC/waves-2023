@@ -20,7 +20,8 @@ export default function TeamsPage() {
   const teamMembers = [
     [
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/D4D03AQGsRX4iX1_B8g/profile-displayphoto-shrink_800_800/0/1685010770469?e=1703721600&v=beta&t=JIMTjQhVvfNu5_jXq8dxGFGYx7FF9LSBd8cmu-BkTO8',
         name: 'Kanishk',
         position: 'President',
         club: 'Council of Student Affairs',
@@ -34,7 +35,8 @@ export default function TeamsPage() {
         contact: '8102105306',
       },
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/D5603AQHcfjpM09NvbQ/profile-displayphoto-shrink_800_800/0/1675535324452?e=1703721600&v=beta&t=jD8cAbDfnylPPOU8aTfUkjIoxBSzM1CZc30akbB6siI',
         name: 'Rajdeep Singh',
         position: 'Waves Convener',
         club: ' ',
@@ -43,21 +45,24 @@ export default function TeamsPage() {
     ],
     [
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/C4D03AQGgFS-WBo8TfQ/profile-displayphoto-shrink_800_800/0/1646298318902?e=1703721600&v=beta&t=lALJKWJqCZz4WsMLSiSL8x6o3DCsZeqGS_cB8ve7pc4',
         name: 'Lagan Saran',
         position: 'Treasurer',
         club: 'Council of Student Affairs',
         contact: '9910880595',
       },
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/C5603AQGOCXk3GzFBFw/profile-displayphoto-shrink_800_800/0/1663740802114?e=1703721600&v=beta&t=E1GjeGc3sZE-ewbW61UChe375A5pc_mHKDB5sJtqOFU',
         name: 'Siddharth Porwal',
         position: 'Sports Secretary',
         club: 'Council of Student Affairs',
         contact: '9374511114',
       },
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/D4E03AQGtLDZ3MdHglg/profile-displayphoto-shrink_800_800/0/1674348097534?e=1703721600&v=beta&t=NtBv2LJBB11E340poX-IbMfN1JioDGSVjUS1bQV_lb4',
         name: 'Abhyuday Singh',
         position: 'General Secretary',
         club: 'Council of Student Affairs',
@@ -66,21 +71,24 @@ export default function TeamsPage() {
     ],
     [
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/C5603AQHzLcNiZCNPfw/profile-displayphoto-shrink_800_800/0/1659513923210?e=1703721600&v=beta&t=wQWijH6FUr17FK8ieBJGM4Vz8qNStwXAofbyPmBd0uU',
         name: 'Parth Keswani',
         position: 'Chief Coordinator',
         club: 'Waves Controls',
         contact: '6294238547',
       },
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/D4D03AQGnDj_EpDuWaQ/profile-displayphoto-shrink_800_800/0/1696716572808?e=1703721600&v=beta&t=Mv63aSwJsBgasfzY43NIEhm8KHjjkaFZ1UmVR8GvExM',
         name: 'Vybhav Badrinarayan',
         position: 'Events Head',
         club: 'Waves Controls',
         contact: '9769331485',
       },
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/C4D03AQFIj_f0uOmWYg/profile-displayphoto-shrink_800_800/0/1663663198812?e=1703721600&v=beta&t=BqyTNVisHKDH00w09fDzDzJD-HtCA9RcEPdz4nzw6Yo',
         name: 'Arya Jain',
         position: 'Operations Head',
         club: 'Waves Controls',
@@ -89,14 +97,16 @@ export default function TeamsPage() {
     ],
     [
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/D5603AQH1UV6lzbTYmw/profile-displayphoto-shrink_800_800/0/1694456084261?e=1703721600&v=beta&t=O2hp8VdfF0816_CNl0aM9EpF8UXvIEumXbkQAY2J808',
         name: 'Sanyam Jain',
         position: 'Chief Coordinator',
         club: 'Department of Finance and Asset Management',
         contact: '6376565989',
       },
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/D4D03AQGmcR-63n-8kA/profile-displayphoto-shrink_800_800/0/1666416645032?e=1703721600&v=beta&t=KoRfK7mWpO8cYHTGDAaDpwc0S8v7Qwaw8TWcVqLGnPQ',
         name: 'Nikhil Menon',
         position: 'Waves Finance Head',
         club: 'Department of Finance and Asset Management',
@@ -105,7 +115,8 @@ export default function TeamsPage() {
     ],
     [
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/D4D03AQHL3ZWBWZUN-w/profile-displayphoto-shrink_800_800/0/1685097097853?e=1703721600&v=beta&t=DBOWb8j2bw67rKln_LtzzMqUZaj8fI9NCDjRicrY-5o',
         name: 'Pranshul Garg',
         position: 'Chief Coordinator',
         club: 'Department of Publicity and Public Relations',
@@ -119,7 +130,8 @@ export default function TeamsPage() {
         contact: '9829487780',
       },
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/D5603AQHO_MysnWFHvQ/profile-displayphoto-shrink_800_800/0/1678202238640?e=1703721600&v=beta&t=JK9LcTNHIXEoTIotliynwzu_xdf3gYEnk9MorkY8nLo',
         name: 'Chahak',
         position: 'Publicity Head',
         club: 'Department of Publicity and Public Relations',
@@ -128,21 +140,24 @@ export default function TeamsPage() {
     ],
     [
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/C5603AQEXriLEE1ksFQ/profile-displayphoto-shrink_800_800/0/1640109809148?e=1703721600&v=beta&t=xtdSi1E-cTOlU0CV1OtwzsESCV0IgdqqMKqfdj0uyrM',
         name: 'Tejas Saraogi',
         position: 'Chief Coordinator',
         club: 'Department of Sponsorship and Marketing',
         contact: '9674458843',
       },
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/D4D03AQH8jJF49wrhaw/profile-displayphoto-shrink_800_800/0/1685014659151?e=1703721600&v=beta&t=mQI0Nrt6t-a8djLMN8t9TSMvgPalIyWdZ6K2s9JW8ps',
         name: 'Ishani Chalke',
         position: 'Waves Coordinator',
         club: 'Department of Sponsorship and Marketing',
         contact: '8779213016',
       },
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/D4D03AQG0aBeLn_d4DA/profile-displayphoto-shrink_800_800/0/1688991158905?e=1703721600&v=beta&t=A8J9UB00PVCDutwdWcZ13mxpTRCYZIMC0_cWyaiCwj8',
         name: 'Rachit Agarwal',
         position: 'Marketing Head',
         club: 'Department of Sponsorship and Marketing',
@@ -151,14 +166,16 @@ export default function TeamsPage() {
     ],
     [
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/D4D03AQE378-SO2qXgw/profile-displayphoto-shrink_800_800/0/1687187740176?e=1703721600&v=beta&t=OmDQcwPzIxK8z0O5dO694wNmExlFM4arMMd-_iTXOq4',
         name: 'Preet Shah',
         position: 'Chief Coordinator',
         club: 'Department of Media and Coverage',
         contact: '9978489171',
       },
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/C5603AQEQVE0iFienww/profile-displayphoto-shrink_800_800/0/1660578543966?e=1703721600&v=beta&t=DOa_FDBu-tYzl7D1sxaI2SAcNefsI4VT8Kr-giqRvuA',
         name: 'Rounak Sanpui',
         position: 'Waves Coordinator',
         club: 'Department of Media and Coverage',
@@ -167,21 +184,24 @@ export default function TeamsPage() {
     ],
     [
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/C4E03AQGljx_oj0h_yg/profile-displayphoto-shrink_800_800/0/1645116928246?e=1703721600&v=beta&t=Ztn79sLgvKnoVF7UX5MuSm87jp_X2SgAzDc4X6o-snc',
         name: 'Shiven Saigal',
         position: 'Chief Coordinator',
         club: 'Department of Professional Nights',
         contact: '9871927434',
       },
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/D4D03AQEiB51j6dq43Q/profile-displayphoto-shrink_800_800/0/1688911656057?e=1703721600&v=beta&t=E8sXRx6umTsFqz4Rxx3ZfwvirQqq335Am7rWFWM_xeQ',
         name: 'Yuvraj Kohli',
         position: 'Nights Head',
         club: 'Department of Professional Nights',
         contact: '8879728235',
       },
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/D4D03AQF1f2uwDNdc7g/profile-displayphoto-shrink_800_800/0/1685681228615?e=1703721600&v=beta&t=j5qRcQ2Mky5otA3JFHS53vitVkCVnlI3KICgnwEzcmk',
         name: 'Lakshin Nagpal',
         position: 'Searock Head',
         club: 'Department of Professional Nights',
@@ -197,14 +217,16 @@ export default function TeamsPage() {
         contact: '9421039393',
       },
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/D4D03AQGTrovSRtvWBA/profile-displayphoto-shrink_800_800/0/1669113494745?e=1703721600&v=beta&t=JglEw4eeLT9beCZnSYDSzXZpUQ0W5ankr00_BdEUNeg',
         name: 'Ayush Purbey',
         position: 'Waves Coordinator',
         club: 'Department of Backstage and Infrastructure Management',
         contact: '7992336041',
       },
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/C4E03AQFEWiKxmLVDnA/profile-displayphoto-shrink_800_800/0/1657355907681?e=1703721600&v=beta&t=55X2yn3_Ec6HgUucEKCuSzXH1W6TSsZuOCTNkmXuyoA',
         name: 'Trisha Hitesh',
         position: 'Backstage Coordinator',
         club: 'Department of Backstage and Infrastructure Management',
@@ -213,14 +235,16 @@ export default function TeamsPage() {
     ],
     [
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/D4D03AQEiZOAEL7TcUw/profile-displayphoto-shrink_800_800/0/1688250908342?e=1703721600&v=beta&t=A1isn2L20nPiedQJsHe7i4NtyJGeFOY6T6TSXtPU2Rk',
         name: 'Garvit Chittora',
         position: 'Chief Coordinator',
         club: 'Department of Photography',
         contact: '7073735177',
       },
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/D4D03AQEwFfPe7tZy_A/profile-displayphoto-shrink_800_800/0/1694366521406?e=1703721600&v=beta&t=jj4Mc5IZD5mxk74hz5qIh5Q3nISbCBzQH0etKtr0S08',
         name: 'Ujjwal Jajoo',
         position: 'Waves Coordinator',
         club: 'Department of Photography',
@@ -378,7 +402,7 @@ export default function TeamsPage() {
                         alignItems='center'
                       >
                         <TeamMemberCard
-                          img=''
+                          img={f.photo}
                           name={f.name}
                           position={f.position}
                           club={f.club}

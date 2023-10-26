@@ -49,7 +49,8 @@ import spnestle from '../assets/spons/nestle.png';
 import spclovia from '../assets/spons/clovia.png';
 import spcorn from '../assets/spons/cornitos.webp';
 import spfablabs from '../assets/spons/fablabs.png';
-
+import artify from '../assets/spons/artify.png';
+import real from '../assets/spons/Real.jpeg';
 const MediaSponsors = [
   {
     key: 1,
@@ -176,6 +177,18 @@ const MediaSponsors = [
     image: spfablabs,
     name: 'Fablabs',
     title: 'Waves Comedy Night Powered By Fablabs',
+  },
+  {
+    key: 22,
+    image: artify,
+    name: 'Artify',
+    title: 'Design Partner',
+  },
+  {
+    key: 23,
+    image: real,
+    name: 'REAL',
+    title: 'Hydration Partner',
   },
 ];
 

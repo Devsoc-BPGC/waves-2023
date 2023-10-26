@@ -253,28 +253,32 @@ export default function TeamsPage() {
     ],
     [
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/C5603AQHAmYy96TJweA/profile-displayphoto-shrink_800_800/0/1657611621937?e=1703721600&v=beta&t=4W2wN6IEiG_Aa-AXXgnsWtc4By6f7sKOqD7P1xUZRsY',
         name: 'Manish Parla',
         position: 'Chief Coordinator',
         club: 'Department of Creative Works',
         contact: '9901985353',
       },
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/D5603AQFgFJ4gjOdT5Q/profile-displayphoto-shrink_800_800/0/1688756392979?e=1703721600&v=beta&t=u70kx7CtFP0DAf5gVF3_OsQgMfjEHyUm4wgQn4g-LZg',
         name: 'Nikhil Kudva',
         position: 'Waves Coordinator',
         club: 'Department of Creative Works',
         contact: '8138888949',
       },
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/C4D03AQEfAUZQvHczCg/profile-displayphoto-shrink_800_800/0/1658047705903?e=1703721600&v=beta&t=jSCy2qrPz-tcdn_z2-sm8Iu2rvzaAynhceg3V4T49uw',
         name: 'Viraj Bhojane',
         position: 'Head of Operations',
         club: 'Department of Creative Works',
         contact: '9604335795',
       },
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/D4D03AQFI-X9lbOu2wA/profile-displayphoto-shrink_800_800/0/1677008756040?e=1703721600&v=beta&t=ewxd97c7TqMSR2ExVBkpqJjI7xlqb4wWKoYSa9QqClM',
         name: 'Aahan Nawab',
         position: 'Special Events Coordinator',
         club: 'Department of Creative Works',
@@ -283,14 +287,16 @@ export default function TeamsPage() {
     ],
     [
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/C4D03AQGq3FRE9STkxA/profile-displayphoto-shrink_800_800/0/1656918679704?e=1703721600&v=beta&t=nNLpnOt-EakYyPhPaICeAXvIU0g2rk0JanYGAbwRY7M',
         name: 'Aditya Raj',
         position: 'Chief Coordinator',
         club: 'Arts n Decoration Department',
         contact: '7366862205',
       },
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/C5603AQH9mt3y4z-xGQ/profile-displayphoto-shrink_800_800/0/1644223100062?e=1703721600&v=beta&t=KkuHs0hE_Hwkvu1AEkXvREpDoT6TZEsdbQL90OX4xbg',
         name: 'Siddhesh Mandhana',
         position: 'Waves Coordinator',
         club: 'Arts n Decoration Department',
@@ -320,7 +326,8 @@ export default function TeamsPage() {
         contact: '7600131404',
       },
       {
-        photo: '',
+        photo:
+          'https://media.licdn.com/dms/image/D5603AQEPMipf0u8j_Q/profile-displayphoto-shrink_800_800/0/1685512843867?e=1703721600&v=beta&t=sRjHWksgs2gBJeFsRvcLK-mzIpqjwyVC74uszn8eEVQ',
         name: 'Sriraj Janmanchi',
         position: 'Surveillance and Technical Head',
         club: 'Department of Surveillance and Registration',

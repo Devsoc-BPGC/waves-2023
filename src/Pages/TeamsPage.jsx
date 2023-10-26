@@ -400,6 +400,7 @@ export default function TeamsPage() {
                   flexDir={isSmallerThan600 ? 'column' : 'row'}
                   justify='center'
                   alignItems={isSmallerThan600 ? 'center' : 'start'}
+                  marginBottom='7rem'
                 >
                   {e.map((f, ind2) => {
                     return (

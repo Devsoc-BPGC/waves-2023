@@ -52,6 +52,7 @@ import spfablabs from '../assets/spons/fablabs.png';
 import artify from '../assets/spons/artify.png';
 import real from '../assets/spons/Real.jpeg';
 import spprincess from '../assets/spons/princess.jpg';
+import uti from '../assets/spons/uti_logo.png';
 const MediaSponsors = [
   {
     key: 1,
@@ -196,6 +197,12 @@ const MediaSponsors = [
     image: spprincess,
     name: 'Princess',
     title: 'Festival Partner',
+  },
+  {
+    key: 25,
+    image: uti,
+    name: 'UTI Mutual Fund',
+    title: 'Official Investor Education Partner',
   },
 ];
 
